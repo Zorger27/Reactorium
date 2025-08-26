@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import {BrowserRouter as Router, Routes, Route, useLocation, Navigate} from 'react-router-dom';
 import { HelmetProvider } from '@dr.pogodin/react-helmet';
-// import Canonical from '@/components/seo/Canonical.jsx';
+import Canonical from '@/components/seo/Canonical.jsx';
 // import GoogleAnalytics from '@/components/seo/GoogleAnalytics.jsx';
 // import GoogleSiteVerification from '@/components/seo/GoogleSiteVerification.jsx';
 
@@ -46,7 +46,7 @@ const AppLayout = () => {
   return (
     <FooterContext.Provider value={{ isFooterHidden, toggleFooter }}>
       <div className="app">
-        {/*<Canonical url={`${import.meta.env.VITE_SITE_URL}${location.pathname}`} />*/}
+        <Canonical url={`${import.meta.env.VITE_SITE_URL}${location.pathname}`} />
         {/*<GoogleAnalytics id={import.meta.env.VITE_GOOGLE_ANALYTICS_ID} />*/}
         {/*<GoogleSiteVerification code={import.meta.env.VITE_GOOGLE_SITE_VERIFICATION_CODE} />*/}
 

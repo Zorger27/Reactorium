@@ -2,7 +2,7 @@
 ### You can view my CV here: [Curriculum VITAE](https://zorger27.github.io)❗️ ###
 ### You can view my Portfolio here: [My Portfolio](https://Zorin.Expert)❗️ ###
 
-<img width="1672" alt="about" src="https://github.com/user-attachments/assets/983f56c6-3d3d-4075-9f2f-dbd6265da37f" />
+<img width="1671" alt="about-uk" src="https://github.com/user-attachments/assets/ba99096c-12b8-4ee9-9870-b0480cd15efb" />
 
 #### 🚀 Reactorium (a blend of "React" (the UI library) and "laboratorium" (Latin for "laboratory, a place for experiments"), meaning "React laboratory") — a secret laboratory of React experiments, where each application holds a surprise crafted from lines of code and a touch of magic! ####
 

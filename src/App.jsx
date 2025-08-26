@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Routes, Route, useLocation, Navigate} from 'rea
 import { HelmetProvider } from '@dr.pogodin/react-helmet';
 import Canonical from '@/components/seo/Canonical.jsx';
 // import GoogleAnalytics from '@/components/seo/GoogleAnalytics.jsx';
-// import GoogleSiteVerification from '@/components/seo/GoogleSiteVerification.jsx';
+import GoogleSiteVerification from '@/components/seo/GoogleSiteVerification.jsx';
 
 import Header from '@/components/layout/header.jsx';
 import Footer from '@/components/layout/footer.jsx';
@@ -48,7 +48,7 @@ const AppLayout = () => {
       <div className="app">
         <Canonical url={`${import.meta.env.VITE_SITE_URL}${location.pathname}`} />
         {/*<GoogleAnalytics id={import.meta.env.VITE_GOOGLE_ANALYTICS_ID} />*/}
-        {/*<GoogleSiteVerification code={import.meta.env.VITE_GOOGLE_SITE_VERIFICATION_CODE} />*/}
+        <GoogleSiteVerification code={import.meta.env.VITE_GOOGLE_SITE_VERIFICATION_CODE} />
 
         {!isNotFound && <Header />}
         <main className="main">

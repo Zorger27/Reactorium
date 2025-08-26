@@ -1,5 +1,5 @@
-// import 'react-i18next';
-//
+import 'react-i18next';
+
 // // отключает строгую проверку ключей
 // declare module 'react-i18next' {
 //   interface CustomTypeOptions {

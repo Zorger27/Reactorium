@@ -2,7 +2,7 @@
 ### You can view my CV here: [Curriculum VITAE](https://zorger27.github.io)❗️ ###
 ### You can view my Portfolio here: [My Portfolio](https://Zorin.Expert)❗️ ###
 
-<img width="1672" height="824" alt="about" src="https://github.com/user-attachments/assets/983f56c6-3d3d-4075-9f2f-dbd6265da37f" />
+<img width="1672" alt="about" src="https://github.com/user-attachments/assets/983f56c6-3d3d-4075-9f2f-dbd6265da37f" />
 
 #### 🚀 Reactorium is a complete project with several web applications built on React 19.1 ####
 

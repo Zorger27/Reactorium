@@ -1,0 +1,93 @@
+{
+  "language": {
+    "en": "English",
+    "uk": "Ukrainian",
+    "es": "Spanish"
+  },
+  "header": {
+    "headerImage": "Main menu! \uD83D\uDE0D",
+    "headerAbout": "Go to About page",
+    "prg01": "Rotating Cube",
+    "prg02": "Calculator",
+    "prg03": "To-Do List",
+    "prg04": "Memory Game",
+    "about": "About"
+  },
+  "footer": {
+    "develop": "Developed by ",
+    "zorger": "Zorger",
+    "point": ".",
+    "rights": "All rights reserved",
+    "linkCV": "Brief Curriculum Vitae",
+    "portfolio": "Link to My Portfolio! \uD83D\uDE09",
+    "footerLogo": "Here I have a little joke! \uD83D\uDE09",
+    "socialSharing": {
+      "shareOnFacebook": "Share on Facebook",
+      "tweetOnExTwitter": "Share on X (ex-Twitter)",
+      "shareOnLinkedIn": "Share on LinkedIn",
+      "shareLink": "Share this Page",
+      "tweetText": "Check out this awesome page!\uD83D\uDE09\uD83D\uDC4D"
+    }
+  },
+  "home": {
+    "title": "Welcome!",
+    "description": "Here are my React projects and information about them. \uD83D\uDE09",
+    "name": "My Projects",
+    "disc": "This is the Project's Main Page"
+  },
+  "project1": {
+    "name": "Rotating Cube",
+    "disc": "Dynamics, geometry, and a touch of 3D magic"
+  },
+  "project2": {
+    "name": "Calculator",
+    "disc": "Both standard and accounting modes"
+  },
+  "project3": {
+    "name": "To-Do List",
+    "disc": "Your personal assistant with data persistence"
+  },
+  "project4": {
+    "name": "Memory Game",
+    "disc": "A fun challenge that you’ll want to play again"
+  },
+  "about": {
+    "title": "Reactorium",
+    "more01": "More information...",
+    "more02": "⚛\uFE0F Reactorium is not just a set of demos, but a whole world from several fully-fledged web applications built with React.",
+    "more03": "Inside you’ll find: \uD83E\uDDCA Rotating Cube — dynamics, geometry, and a touch of 3D magic; \uD83E\uDDEE Calculator — both standard and accounting modes; \uD83D\uDCDD To-Do List — your personal assistant with data persistence; \uD83C\uDFB2 Memory Game — a fun challenge that you’ll want to play again.",
+    "more04": "\uD83D\uDE80 Reactorium is where modern technologies meet simple and engaging ideas. It’s a project about turning code into useful tools and little joys.",
+    "more05": "Welcome! \uD83E\uDD29\uD83D\uDE0E",
+    "technologies": "The used technologies",
+    "name": "Name",
+    "version": "Version",
+    "nameOG": "About",
+    "disc": "Detailed project information"
+  },
+  "page404": {
+    "name": "Page Not Found",
+    "disc": "Page 404 - page not found",
+    "info404": "Page not found, back to main page",
+    "btn404": "Back to MAIN page"
+  },
+  "page": {
+    "name": "Page",
+    "disc": "A Progressive Web App built with React and Vite"
+  },
+  "extra": {
+    "loading": "Loading...",
+    "detail": "For more details see here ⇢",
+    "back": "Return to the main page",
+    "tableView": "Table view",
+    "listView": "List view",
+    "openSearch": "Show SEARCH window",
+    "closeSearch": "Close SEARCH window",
+    "ascOrder": "Sort by ascending",
+    "desOrder": "Sort by descending",
+    "closeFooter": "Hide footer",
+    "openFooter": "Show footer",
+    "fullScreenView": "Canvas Full Screen",
+    "toggleFullScreen": "Document Full Screen",
+    "closeFullScreen": "Close full-screen document mode"
+  }
+}

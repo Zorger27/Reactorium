@@ -1,0 +1,93 @@
+{
+  "language": {
+    "en": "Inglés",
+    "uk": "Ukraniano",
+    "es": "Español"
+  },
+  "header": {
+    "headerImage": "¡Menú principal! \uD83D\uDE0D",
+    "headerAbout": "Ir a la página Sobre",
+    "prg01": "Cubo Giratorio",
+    "prg02": "Calculadora",
+    "prg03": "Lista de tareas",
+    "prg04": "Juego de memoria",
+    "about": "Sobre"
+  },
+  "footer": {
+    "develop": "Desarrollado por ",
+    "zorger": "Zorger",
+    "point": ".",
+    "rights": "Todos los derechos reservados",
+    "linkCV": "Mi currículum (resumen breve)",
+    "portfolio": "¡Enlace a mi portafolio! \uD83D\uDE09",
+    "footerLogo": "¡Aquí tengo una pequeña broma! \uD83D\uDE09",
+    "socialSharing": {
+      "shareOnFacebook": "Compartir en Facebook",
+      "tweetOnExTwitter": "Compartir en X (antes Twitter)",
+      "shareOnLinkedIn": "Compartir en LinkedIn",
+      "shareLink": "Compartir esta página",
+      "tweetText": "¡Echa un vistazo a esta increíble página!\uD83D\uDE09\uD83D\uDC4D"
+    }
+  },
+  "home": {
+    "title": "¡Bienvenido!",
+    "description": "Aquí están mis proyectos React e información sobre ellos. \uD83D\uDE09",
+    "name": "Mis proyectos",
+    "disc": "Esta es la página principal del proyecto"
+  },
+  "project1": {
+    "name": "Cubo Giratorio",
+    "disc": "Dinámica, geometría y un poco de magia 3D"
+  },
+  "project2": {
+    "name": "Calculadora",
+    "disc": "En versión estándar y contable"
+  },
+  "project3": {
+    "name": "Lista de tareas",
+    "disc": "Tu asistente personal con guardado de datos"
+  },
+  "project4": {
+    "name": "Juego de memoria",
+    "disc": "Un reto divertido al que querrás volver a jugar"
+  },
+  "about": {
+    "title": "Reactorium",
+    "more01": "Más información...",
+    "more02": "⚛\uFE0F Reactorium no es solo un conjunto de demos, sino todo un mundo de varios aplicaciones web completas creadas con React.",
+    "more03": "Aquí encontrarás: \uD83E\uDDCA Cubo Giratorio — dinámica, geometría y un poco de magia 3D; \uD83E\uDDEE Calculadora — en versión estándar y contable; \uD83D\uDCDD To-Do List — tu asistente personal con guardado de datos; \uD83C\uDFB2 Memory Game — un reto divertido al que querrás volver a jugar.",
+    "more04": "\uD83D\uDE80 Reactorium es el lugar donde la tecnología moderna se une con ideas simples y atractivas. Es un proyecto sobre cómo el código puede convertirse en herramientas útiles y pequeñas alegrías.",
+    "more05": "¡Bienvenido! \uD83E\uDD29\uD83D\uDE0E",
+    "technologies": "Las tecnologías utilizadas",
+    "name": "Nombre",
+    "version": "Versión",
+    "nameOG": "Sobre",
+    "disc": "Información detallada del proyecto"
+  },
+  "page404": {
+    "name": "Página No Encontrada",
+    "disc": "Página 404 - página no encontrada",
+    "info404": "Página no encontrada, volver a la página principal",
+    "btn404": "Volver a la página PRINCIPAL"
+  },
+  "page": {
+    "name": "Página",
+    "disc": "Una aplicación web progresiva creada con React y Vite"
+  },
+  "extra": {
+    "loading": "Cargando...",
+    "detail": "Para más detalles ver aquí ⇢",
+    "back": "Volver a la página principal",
+    "tableView": "Vista de tabla",
+    "listView": "Vista de lista",
+    "openSearch": "Mostrar ventana de BÚSQUEDA",
+    "closeSearch": "Cerrar la ventana de BÚSQUEDA",
+    "ascOrder": "Ordenar por orden ascendente",
+    "desOrder": "Ordenar por orden descendente",
+    "closeFooter": "Ocultar pie de página",
+    "openFooter": "Mostrar pie de página",
+    "fullScreenView": "Lienzo en pantalla completa",
+    "toggleFullScreen": "Documento en pantalla completa",
+    "closeFullScreen": "Cerrar el modo de documento de pantalla completa"
+  }
+}

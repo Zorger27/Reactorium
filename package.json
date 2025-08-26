@@ -1,6 +1,6 @@
 {
   "name": "reactorium",
-  "description": "A collection of several React web apps: a calculator, a to-do list, a memory game, and a rotating cube",
+  "description": "Reactorium (a blend of \"React\" (the UI library) and \"laboratorium\" (Latin for \"laboratory, a place for experiments\"), meaning \"React laboratory\") — a secret laboratory of React experiments.",
   "private": true,
   "version": "0.1.0",
   "type": "module",

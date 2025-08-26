@@ -38,7 +38,7 @@ const Home = () => {
           {t('home.title')}
           <ToggleFooterButton />
         </h1>
-        <p className="flex-center">{t('home.description')}</p>
+        {/*<p className="flex-center">{t('home.description')}</p>*/}
         <hr className="custom-line" />
         <div className="projects-grid">
           <Link to="/project1" className="project-card-link">

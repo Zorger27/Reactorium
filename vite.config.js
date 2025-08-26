@@ -32,7 +32,7 @@ export default defineConfig(({ mode }) => {
         manifest: {
           name: 'Reactorium',
           short_name: 'Reactorium',
-          description: 'A collection of several React web apps: a calculator, a to-do list, a memory game, and a rotating cube.',
+          description: 'Reactorium (a blend of "React" (the UI library) and "laboratorium" (Latin for "laboratory, a place for experiments"), meaning "React laboratory") — a secret laboratory of React experiments.',
           theme_color: '#ffffff',
           background_color: '#ffffff',
           display: 'standalone',

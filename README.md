@@ -4,7 +4,7 @@
 
 <img width="1672" alt="about" src="https://github.com/user-attachments/assets/983f56c6-3d3d-4075-9f2f-dbd6265da37f" />
 
-#### 🚀 Reactorium is a complete project with several web applications built on React 19.1 ####
+#### 🚀 Reactorium (a blend of "React" (the UI library) and "laboratorium" (Latin for "laboratory, a place for experiments"), meaning "React laboratory") — a secret laboratory of React experiments, where each application holds a surprise crafted from lines of code and a touch of magic! ####
 
 ✨️ <ins>Each one is unique and covers different aspects of development — from visual experiments to practical tools:</ins><br>
 🧊 Rotating Cube — 3D animation with size control.<br>

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://react-js-template.vercel.app/sitemap.xml
+Sitemap: https://reactorium-zorger.vercel.app/sitemap.xml

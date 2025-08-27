@@ -41,9 +41,9 @@ export default function handler(req, res) {
         es: { title: "Reactorium", desc: "Una colección de varios aplicaciones web en React (creado por Anatolii Zorin)" }
       },
       project1: {
-        en: { title: "Rotating Cube", desc: "Dynamics, geometry, and a touch of 3D magic (created by Anatolii Zorin)" },
-        uk: { title: "Обертальний куб", desc: "Динаміка, геометрія й трішки 3D-магії (створено Анатолієм Зоріним)" },
-        es: { title: "Cubo Giratorio", desc: "Dinámica, geometría y un poco de magia 3D (creado por Anatolii Zorin)" }
+        en: { title: "Cube", desc: "Dynamics, geometry, and a touch of 3D magic (created by Anatolii Zorin)" },
+        uk: { title: "Куб", desc: "Динаміка, геометрія й трішки 3D-магії (створено Анатолієм Зоріним)" },
+        es: { title: "Cubo", desc: "Dinámica, geometría y un poco de magia 3D (creado por Anatolii Zorin)" }
       },
       project2: {
         en: { title: "Calculator", desc: "Both standard and accounting modes (created by Anatolii Zorin)" },

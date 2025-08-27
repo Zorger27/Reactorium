@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from "react";
+import CalculatorStandart from "@/components/other/CalculatorStandart.jsx";
+import CalculatorFinance from "@/components/other/CalculatorFinance.jsx";
 import '@/pages/menu/Project2.scss';
 import { useTranslation } from 'react-i18next';
 import {Link} from "react-router-dom";
@@ -11,6 +13,7 @@ export const Project2 = () => {
   const siteUrl = import.meta.env.VITE_SITE_URL;
 
   useSpaCleanup();
+  const [mode, setMode] = useState("standard"); // "standard" | "finance"
 
   return (
     <div className="project2">
@@ -40,6 +43,29 @@ export const Project2 = () => {
           <ToggleFooterButton />
         </h1>
         <hr className="custom-line" />
+
+        <div className="calculator-view">
+          <div className="mode-switch">
+            <button
+              className={mode === "standard" ? "active" : ""}
+              onClick={() => setMode("standard")}
+            >
+              Standard
+            </button>
+            <button
+              className={mode === "finance" ? "active" : ""}
+              onClick={() => setMode("finance")}
+            >
+              Finance
+            </button>
+          </div>
+
+          <div className="calculator-container">
+            {mode === "standard" && <CalculatorStandart />}
+            {mode === "finance" && <CalculatorFinance />}
+          </div>
+        </div>
+
       </div>
     </div>
   );

@@ -7,7 +7,7 @@
   "header": {
     "headerImage": "¡Menú principal! \uD83D\uDE0D",
     "headerAbout": "Ir a la página Sobre",
-    "prg01": "Cubo Giratorio",
+    "prg01": "Cubo",
     "prg02": "Calculadora",
     "prg03": "Lista de tareas",
     "prg04": "Juego de memoria",
@@ -36,7 +36,7 @@
     "disc": "Esta es la página principal del proyecto"
   },
   "project1": {
-    "name": "Cubo Giratorio",
+    "name": "Cubo",
     "disc": "Dinámica, geometría y un poco de magia 3D"
   },
   "project2": {

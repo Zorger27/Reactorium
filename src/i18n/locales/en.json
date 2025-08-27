@@ -7,7 +7,7 @@
   "header": {
     "headerImage": "Main menu! \uD83D\uDE0D",
     "headerAbout": "Go to About page",
-    "prg01": "Rotating Cube",
+    "prg01": "Cube",
     "prg02": "Calculator",
     "prg03": "To-Do List",
     "prg04": "Memory Game",
@@ -36,7 +36,7 @@
     "disc": "This is the Project's Main Page"
   },
   "project1": {
-    "name": "Rotating Cube",
+    "name": "Cube",
     "disc": "Dynamics, geometry, and a touch of 3D magic"
   },
   "project2": {

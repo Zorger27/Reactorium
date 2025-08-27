@@ -2,7 +2,47 @@
   flex: 1 0 auto;
   background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(255, 240, 244)) no-repeat center;
 
-  .container { h1 {font-size: 2.5rem;margin: 0.7rem auto;color: black;} }
+  .container {
+    h1 {font-size: 2.5rem;margin: 0.7rem auto;color: black;}
+
+    .calculator-view {
+      max-width: 500px;
+      margin: 20px auto;
+      //margin: 20px;
+      padding: 10px;
+      text-align: center;
+      background: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+
+      .mode-switch {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+
+        button {
+          padding: 10px 20px;
+          border: none;
+          border-radius: 8px;
+          background: #f0f0f0;
+          cursor: pointer;
+          font-size: 15px;
+          font-weight: 600;
+          transition: background 0.2s;
+
+          &:hover {
+            background: #d9d9d9;
+          }
+
+          &.active {
+            background: #007bff;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media(max-width: 1020px) {

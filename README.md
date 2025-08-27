@@ -8,7 +8,7 @@
 
 ✨️ <ins>Each one is unique and covers different aspects of development — from visual experiments to practical tools:</ins><br>
 🧊 Rotating Cube — 3D animation with size control.<br>
-🧮 Calculator — both standard and accounting.<br>
+🧮 Calculator — both standard and finance modes.<br>
 📝 To-Do List — with data persistence in LocalStorage.<br>
 🎲 Memory Game — a dynamic card-matching game.
 

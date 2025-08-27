@@ -12,7 +12,7 @@ header {
   box-shadow: 0 2px 4px grey;
 
   .header-img {
-    margin: 0.3rem 0;
+    margin: 0.3rem 0 0.3rem 0.5rem;
     display: grid;
     grid-template-columns: 1fr 1fr 2fr 1fr;
     grid-template-rows: auto;
@@ -130,7 +130,7 @@ header {
 
 @media(max-width: 1020px) {
   header {
-    .header-img {margin: 0.5rem 0;}
+    .header-img {margin: 0.3rem 0 0.3rem 0.3rem;}
     .menu {
       a {
         margin-right: 6px;

@@ -65,47 +65,26 @@ export const Project1 = () => {
         </h1>
         <hr className="custom-line" />
         <div className="cube-container" onWheel={handleWheel}>
-          <div
-            className="cube"
-            style={{
-              width: calculatedCubeSize,
-              height: calculatedCubeSize,
-              transform: `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`,
-            }}
+          <div className="cube"
+            style={{width: calculatedCubeSize, height: calculatedCubeSize, transform: `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`,}}
           >
-            <div
-              className="face front"
+            <div className="face front"
               style={{ transform: `translateZ(${calculatedTranslateZ})` }}
             />
-            <div
-              className="face back"
-              style={{
-                transform: `rotateY(180deg) translateZ(${calculatedTranslateZBack})`,
-              }}
+            <div className="face back"
+              style={{transform: `rotateY(180deg) translateZ(${calculatedTranslateZBack})`,}}
             />
-            <div
-              className="face left"
-              style={{
-                transform: `rotateY(-90deg) translateZ(${calculatedTranslateZSide}) translateX(-50%)`,
-              }}
+            <div className="face left"
+              style={{transform: `rotateY(-90deg) translateZ(${calculatedTranslateZSide}) translateX(-50%)`,}}
             />
-            <div
-              className="face right"
-              style={{
-                transform: `rotateY(90deg) translateZ(${calculatedTranslateZSide}) translateX(50%)`,
-              }}
+            <div className="face right"
+              style={{transform: `rotateY(90deg) translateZ(${calculatedTranslateZSide}) translateX(50%)`,}}
             />
-            <div
-              className="face top"
-              style={{
-                transform: `rotateX(90deg) translateZ(${calculatedTranslateZSide}) translateY(-50%)`,
-              }}
+            <div className="face top"
+              style={{transform: `rotateX(90deg) translateZ(${calculatedTranslateZSide}) translateY(-50%)`,}}
             />
-            <div
-              className="face bottom"
-              style={{
-                transform: `rotateX(-90deg) translateZ(${calculatedTranslateZSide}) translateY(50%)`,
-              }}
+            <div className="face bottom"
+              style={{transform: `rotateX(-90deg) translateZ(${calculatedTranslateZSide}) translateY(50%)`,}}
             />
           </div>
         </div>

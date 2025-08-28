@@ -25,7 +25,8 @@ const Header = () => {
   // Закрывать при клике вне бургер-кнопки И вне самого меню
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (!showMenu) return;
+      if (!showMenu && !showProjects) return; // 👈 проверяем оба состояния
+
       const burgerEl = burgerRef.current;
       const menuEl = menuRef.current;
       const target = event.target;
@@ -40,7 +41,7 @@ const Header = () => {
 
     document.addEventListener('click', handleClickOutside);
     return () => document.removeEventListener('click', handleClickOutside);
-  }, [showMenu]);
+  }, [showMenu, showProjects]);
 
   return (
     <header className="header">

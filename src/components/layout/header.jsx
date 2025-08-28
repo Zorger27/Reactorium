@@ -74,6 +74,8 @@ const Header = () => {
       <div ref={menuRef} className={`menu ${showMenu ? 'is-active' : ''}`}
         onClick={(e) => e.stopPropagation()} // клики внутри не закрывают меню
       >
+        <Link to="/" onClick={closeAll}>{t('header.main')}</Link>
+
         <div className={`menu-item ${showProjects ? 'open' : ''}`}>
           <button type="button" className="menu-toggle" onClick={toggleProjects} aria-expanded={showProjects} aria-controls="projects-submenu">
             {t('header.projects')}

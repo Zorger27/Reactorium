@@ -78,10 +78,10 @@ const Header = () => {
         <Link to="/" onClick={closeAll}>{t('header.main')}</Link>
 
         <div className={`menu-item ${showProjects ? 'open' : ''}`}>
-          <button type="button" className="menu-toggle" onClick={toggleProjects} aria-expanded={showProjects} aria-controls="projects-submenu">
+          <a className="menu-toggle" onClick={toggleProjects} aria-expanded={showProjects} aria-controls="projects-submenu">
             {t('header.projects')}
-            <i className={`fa ${showProjects ? 'fa-caret-up' : 'fa-caret-down'}`} />
-          </button>
+            <span><i className={`fa ${showProjects ? 'fa-caret-up' : 'fa-caret-down'}`} /></span>
+          </a>
 
           <div id="projects-submenu" className="submenu" aria-hidden={!showProjects}>
             <Link to="/project1" onClick={closeAll}>{t('header.prg01')}</Link>

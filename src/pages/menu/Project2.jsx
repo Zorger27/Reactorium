@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CalculatorStandart from "@/components/other/CalculatorStandart.jsx";
 import CalculatorFinance from "@/components/other/CalculatorFinance.jsx";
 import '@/pages/menu/Project2.scss';
@@ -14,6 +14,19 @@ export const Project2 = () => {
 
   useSpaCleanup();
   const [mode, setMode] = useState("standard"); // "standard" | "finance"
+
+  // Загружаем сохранённый режим при первом рендере
+  useEffect(() => {
+    const savedMode = localStorage.getItem("calculatorMode");
+    if (savedMode === "standard" || savedMode === "finance") {
+      setMode(savedMode);
+    }
+  }, []);
+
+  // Сохраняем режим при каждом изменении
+  useEffect(() => {
+    localStorage.setItem("calculatorMode", mode);
+  }, [mode]);
 
   return (
     <div className="project2">

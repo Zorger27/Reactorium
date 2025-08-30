@@ -43,7 +43,9 @@
   },
   "project2": {
     "name": "Calculator",
-    "disc": "Both standard and finance modes"
+    "disc": "Both standard and finance modes",
+    "standard": "Standard",
+    "finance": "Finance"
   },
   "project3": {
     "name": "To-Do List",

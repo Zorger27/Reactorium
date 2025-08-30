@@ -43,7 +43,9 @@
   },
   "project2": {
     "name": "Calculadora",
-    "disc": "En versión estándar y finanzas"
+    "disc": "En versión estándar y finanzas",
+    "standard": "Estándar",
+    "finance": "Finanzas"
   },
   "project3": {
     "name": "Lista de tareas",

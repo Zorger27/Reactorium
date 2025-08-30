@@ -40,13 +40,14 @@ export const Project2 = () => {
         <h1><Link to="/" className="back-to-menu" title={t('extra.back')}>
           <i className="fa fa-arrow-circle-left"></i></Link>
           {t('project2.name')}
-          <ToggleFooterButton />
 
           <div className="mode-switch">
             <button className={mode} onClick={() => setMode(mode === "standard" ? "finance" : "standard")}>
-              {mode === "standard" ? "Finance" : "Standard"}
+              {mode === "standard" ? t("project2.finance") : t("project2.standard")}
             </button>
           </div>
+
+          <ToggleFooterButton />
 
         </h1>
         <hr className="custom-line" />

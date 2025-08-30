@@ -6,13 +6,23 @@
   background-repeat: no-repeat;
 
   .container {
-    h1 {font-size: 2.5rem;margin: 0.7rem auto;color: #2c3e50;}
+    h1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 2.5rem;
+      margin: 0.7rem auto;
+      color: #2c3e50;
+    }
+
     h3 {
       color: seagreen;
       margin-bottom: 1rem;
       font-size: 1.8rem;
       text-align: left;
     }
+
     p {
       color: darkblue;
       margin-bottom: 1rem;

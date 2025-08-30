@@ -41,30 +41,18 @@ export const Project2 = () => {
           <i className="fa fa-arrow-circle-left"></i></Link>
           {t('project2.name')}
           <ToggleFooterButton />
+
+          <div className="mode-switch">
+            <button className={mode} onClick={() => setMode(mode === "standard" ? "finance" : "standard")}>
+              {mode === "standard" ? "Finance" : "Standard"}
+            </button>
+          </div>
+
         </h1>
         <hr className="custom-line" />
 
-        <div className="calculator-view">
-          <div className="mode-switch">
-            <button
-              className={mode === "standard" ? "active" : ""}
-              onClick={() => setMode("standard")}
-            >
-              Standard
-            </button>
-            <button
-              className={mode === "finance" ? "active" : ""}
-              onClick={() => setMode("finance")}
-            >
-              Finance
-            </button>
-          </div>
-
-          <div className="calculator-container">
-            {mode === "standard" && <CalculatorStandart />}
-            {mode === "finance" && <CalculatorFinance />}
-          </div>
-        </div>
+        {mode === "standard" && <CalculatorStandart />}
+        {mode === "finance" && <CalculatorFinance />}
 
       </div>
     </div>

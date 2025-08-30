@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useTranslation } from 'react-i18next';
 import "@/components/other/CalculatorStandart.scss";
 
 export default function CalculatorStandart() {
+  const { t } = useTranslation();
   const [input, setInput] = useState("");
   const [result, setResult] = useState("");
 
@@ -30,7 +32,7 @@ export default function CalculatorStandart() {
 
   return (
     <div className="calculator-standart">
-      <h2>Standard Calculator</h2>
+      <h2>{t("project2.standard-full")}</h2>
 
       <div className="display">
         <div className="input">{input || "0"}</div>

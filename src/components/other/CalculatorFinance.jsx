@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useTranslation } from 'react-i18next';
 import "@/components/other/CalculatorFinance.scss";
 
 export default function CalculatorFinance() {
+  const { t } = useTranslation();
   const [amount, setAmount] = useState("");
   const [rate, setRate] = useState("");
   const [years, setYears] = useState("");
@@ -24,7 +26,7 @@ export default function CalculatorFinance() {
 
   return (
     <div className="calculator-finance">
-      <h2>Finance Calculator</h2>
+      <h2>{t("project2.finance-full")}</h2>
 
       <div className="form-group">
         <label>Amount</label>

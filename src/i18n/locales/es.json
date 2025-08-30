@@ -47,7 +47,18 @@
   },
   "project3": {
     "name": "Lista de tareas",
-    "disc": "Tu asistente personal con guardado de datos"
+    "disc": "Tu asistente personal con guardado de datos",
+    "add-task": "Añadir tarea",
+    "add": "Añadir",
+    "task": "Nombre de tarea",
+    "status": "Estatus",
+    "done": "Hecho",
+    "in-progress": "En progreso",
+    "actions": "Acciones",
+    "edit": "Corregir",
+    "delete": "Borrar",
+    "delete-msg": "¿Estás seguro de que quieres hacer esto? \uD83E\uDDD0\uD83D\uDE32\uD83D\uDE09",
+    "delete-all": "Borrar todas las tareas"
   },
   "project4": {
     "name": "Juego de memoria",

@@ -47,7 +47,18 @@
   },
   "project3": {
     "name": "To-Do List",
-    "disc": "Your personal assistant with data persistence"
+    "disc": "Your personal assistant with data persistence",
+    "add-task": "Add task",
+    "add": "Add",
+    "task": "Task Name",
+    "status": "Status",
+    "done": "Done",
+    "in-progress": "In progress",
+    "actions": "Actions",
+    "edit": "Edit",
+    "delete": "Delete",
+    "delete-msg": "Are you sure you want to do this? \uD83E\uDDD0\uD83D\uDE32\uD83D\uDE09",
+    "delete-all": "Delete all tasks"
   },
   "project4": {
     "name": "Memory Game",

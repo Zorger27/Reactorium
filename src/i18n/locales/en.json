@@ -47,7 +47,16 @@
     "standard": "Standard",
     "standard-full": "Standard calculator",
     "finance": "Finance",
-    "finance-full": "Financial calculator"
+    "finance-full": "Financial calculator",
+    "amount": "Amount",
+    "enter-amount": "Enter amount",
+    "rate": "Interest Rate (%)",
+    "enter-rate": "Enter rate",
+    "years": "Years",
+    "enter-years": "Enter years",
+    "calculate": "Calculate",
+    "future-value": "Future Value = ",
+    "message": "Please enter valid numbers"
   },
   "project3": {
     "name": "To-Do List",

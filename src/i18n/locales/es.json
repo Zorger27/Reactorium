@@ -47,7 +47,16 @@
     "standard": "Estándar",
     "standard-full": "Calculadora estándar",
     "finance": "Finanzas",
-    "finance-full": "Calculadora financiera"
+    "finance-full": "Calculadora financiera",
+    "amount": "Monto",
+    "enter-amount": "Ingrese el monto",
+    "rate": "Tasa de interés (%)",
+    "enter-rate": "Introduzca la tasa",
+    "years": "Años",
+    "enter-years": "Introduzca años",
+    "calculate": "Calcular",
+    "future-value": "Valor futuro = ",
+    "message": "Por favor, introduzca números válidos"
   },
   "project3": {
     "name": "Lista de tareas",

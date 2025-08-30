@@ -15,7 +15,7 @@ export default function CalculatorFinance() {
     const time = parseInt(years);
 
     if (isNaN(principal) || isNaN(interestRate) || isNaN(time)) {
-      setResult("Please enter valid numbers");
+      setResult(t("project2.message"));
       return;
     }
 
@@ -29,34 +29,34 @@ export default function CalculatorFinance() {
       <h2>{t("project2.finance-full")}</h2>
 
       <div className="form-group">
-        <label>Amount</label>
+        <label>{t("project2.amount")}</label>
         <input type="number" value={amount}
           onChange={(e) => setAmount(e.target.value)}
-          placeholder="Enter amount"
+          placeholder={t("project2.enter-amount")}
         />
       </div>
 
       <div className="form-group">
-        <label>Interest Rate (%)</label>
+        <label>{t("project2.rate")}</label>
         <input type="number" value={rate}
           onChange={(e) => setRate(e.target.value)}
-          placeholder="Enter rate"
+          placeholder={t("project2.enter-rate")}
         />
       </div>
 
       <div className="form-group">
-        <label>Years</label>
+        <label>{t("project2.years")}</label>
         <input type="number" value={years}
           onChange={(e) => setYears(e.target.value)}
-          placeholder="Enter years"
+          placeholder={t("project2.enter-years")}
         />
       </div>
 
-      <button onClick={calculate}>Calculate</button>
+      <button onClick={calculate}>{t("project2.calculate")}</button>
 
       {result !== null && (
         <div className="result">
-          <strong>Future Value: </strong> {result}
+          <strong>{t("project2.future-value")}</strong> {result}
         </div>
       )}
     </div>

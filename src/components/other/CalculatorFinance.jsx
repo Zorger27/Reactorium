@@ -30,9 +30,7 @@ export default function CalculatorFinance() {
 
       <div className="form-group">
         <label>Amount</label>
-        <input
-          type="number"
-          value={amount}
+        <input type="number" value={amount}
           onChange={(e) => setAmount(e.target.value)}
           placeholder="Enter amount"
         />
@@ -40,9 +38,7 @@ export default function CalculatorFinance() {
 
       <div className="form-group">
         <label>Interest Rate (%)</label>
-        <input
-          type="number"
-          value={rate}
+        <input type="number" value={rate}
           onChange={(e) => setRate(e.target.value)}
           placeholder="Enter rate"
         />
@@ -50,9 +46,7 @@ export default function CalculatorFinance() {
 
       <div className="form-group">
         <label>Years</label>
-        <input
-          type="number"
-          value={years}
+        <input type="number" value={years}
           onChange={(e) => setYears(e.target.value)}
           placeholder="Enter years"
         />

@@ -22,36 +22,35 @@
       padding: 0;
     }
 
-    .btn {
-      padding: 0.5rem 1rem;
-      margin-bottom: 0.8rem;
-      font-size: 1.4rem;
-      font-weight: bold;
-      background-image: url("@/assets/background/background05.webp");
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      border: 1px solid lightslategrey;
-      border-radius: 5px;
-      text-align: center;
-      cursor: pointer;
-      transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
-    }
+    .start {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 1rem auto;
 
-    button:hover {
-      box-shadow: 3px 3px 4px 0 lightgrey;
-    }
+      .btn-rules, .btn-newGame {
+        padding: 0.5rem 1rem;
+        margin-left: 0.8rem;
+        font-size: 1.4rem;
+        font-weight: bold;
+        background-image: url("@/assets/background/background05.webp");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: 1px solid dimgray;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+        transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+      }
 
-    .rules {
-      display: inline-flex;
-      color: lightseagreen;
-      cursor: pointer;
-      border: 1px solid transparent;
-      margin-bottom: 0.5rem;
-    }
-
-    .rules:hover, :focus {
-      border-bottom: 1px solid lightseagreen;
+      button:hover {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        border: 1px solid gray;
+      }
+      .btn-rules {margin-left: 0;}
     }
 
     .memory-game {
@@ -123,6 +122,18 @@
     .container {
       h1 {font-size: 2.3rem;margin: 0.6rem auto;}
 
+      .start {
+        margin: 0.9rem auto;
+
+        .btn-rules, .btn-newGame {
+          padding: 0.5rem 0.9rem;
+          margin-left: 0.8rem;
+          font-size: 1.4rem;
+          border-radius: 5px;
+        }
+        .btn-rules {margin-left: 0;}
+      }
+
       .memory-game {
         margin: 0.4rem auto;
         grid-column-gap: 0.4rem;
@@ -142,6 +153,18 @@
   .project4 {
     .container {
       h1 {font-size: 2rem;margin: 0.5rem auto;}
+
+      .start {
+        margin: 0.7rem 0;
+
+        .btn-rules, .btn-newGame {
+          padding: 0.5rem 0.9rem;
+          margin-left: 0.8rem;
+          font-size: 1.4rem;
+          border-radius: 5px;
+        }
+        .btn-rules {margin-left: 0;}
+      }
 
       .memory-game {
         margin: 0.5rem auto;

@@ -133,10 +133,13 @@ export const Project4 = () => {
         </h1>
         <hr className="custom-line" />
 
-        <h2 onClick={() => setShowRules(!showRules)} className="rules">
-          {t("project4.rules-h2")}
-          <i style={{ color: "red", marginLeft: "0.5rem" }} className="fas fa-hand-pointer"></i>
-        </h2>
+        <div className="start">
+          <button onClick={() => setShowRules(!showRules)} className="btn-rules">
+            {t("project4.rules-h2")}
+            <i style={{ color: "red", marginLeft: "0.2rem" }} className="fas fa-hand-pointer"></i>
+          </button>
+          <button className="btn-newGame" onClick={startNewGame}>{t("project4.newGame")}</button>
+        </div>
 
         {showRules && (
           <div>
@@ -147,7 +150,7 @@ export const Project4 = () => {
           </div>
         )}
 
-        <div><button className="btn" onClick={startNewGame}>{t("project4.newGame")}</button></div>
+        {/*<div><button className="btn" onClick={startNewGame}>{t("project4.newGame")}</button></div>*/}
 
         <hr className="custom-line" />
 

@@ -150,8 +150,6 @@ export const Project4 = () => {
           </div>
         )}
 
-        {/*<div><button className="btn" onClick={startNewGame}>{t("project4.newGame")}</button></div>*/}
-
         <hr className="custom-line" />
 
         <div className="memory-game">

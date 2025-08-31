@@ -57,7 +57,7 @@ export default function handler(req, res) {
       },
       project4: {
         en: { title: "Memory Game", desc: "A fun challenge that you’ll want to play again (created by Anatolii Zorin)" },
-        uk: { title: "Memory Game", desc: "Гра на уважність, у яку захочеться зіграти ще раз (створено Анатолієм Зоріним)" },
+        uk: { title: "Гра Пам'ять", desc: "Гра на уважність, у яку захочеться зіграти ще раз (створено Анатолієм Зоріним)" },
         es: { title: "Juego de memoria", desc: "Un reto divertido al que querrás volver a jugar (creado por Anatolii Zorin)" }
       },
       about: {

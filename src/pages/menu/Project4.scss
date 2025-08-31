@@ -1,6 +1,10 @@
 .project4 {
   flex: 1 0 auto;
-  background: linear-gradient(to bottom, rgb(252, 241, 253), rgb(234, 250, 245)) no-repeat center;
+  //background: linear-gradient(to bottom, rgb(252, 241, 253), rgb(234, 250, 245)) no-repeat center;
+  background-image: url("@/assets/background/background06.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   .container {
     h1 {
@@ -12,17 +16,144 @@
       margin: 0.7rem auto;
       color: black;
     }
+
+    h2, h3, p {
+      margin: 0;
+      padding: 0;
+    }
+
+    .btn {
+      padding: 0.5rem 1rem;
+      margin-bottom: 0.8rem;
+      font-size: 1.4rem;
+      font-weight: bold;
+      background-image: url("@/assets/background/background05.webp");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border: 1px solid lightslategrey;
+      border-radius: 5px;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+    }
+
+    button:hover {
+      box-shadow: 3px 3px 4px 0 lightgrey;
+    }
+
+    .rules {
+      display: inline-flex;
+      color: lightseagreen;
+      cursor: pointer;
+      border: 1px solid transparent;
+      margin-bottom: 0.5rem;
+    }
+
+    .rules:hover, :focus {
+      border-bottom: 1px solid lightseagreen;
+    }
+
+    .memory-game {
+      display: grid;
+      margin: 1rem auto;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 0.5rem;
+      width: 50%;
+      justify-content: center;
+    }
+
+    .memory-card {
+      position: relative;
+      width: 12rem;
+      height: 12rem;
+      margin: 0.4rem;
+    }
+
+    .memory-card .front-face,
+    .memory-card .back-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      transform: scale(1);
+      transition: transform 0.5s;
+      transform-style: preserve-3d;
+    }
+
+    .memory-card .front-face {
+      transform: rotateY(180deg);
+    }
+
+    .memory-card.flipped .front-face {
+      transform: rotateY(0deg);
+    }
+
+    .memory-card.flipped .back-face {
+      transform: rotateY(-180deg);
+    }
+
+    .memory-card.matched {
+      opacity: 0.5;
+    }
+
+    .front-face,
+    .back-face {
+      //box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+      //border-radius: 10px;
+    }
+
+    .front-face {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .back-face {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
   }
 }
 
 @media(max-width: 1020px) {
   .project4 {
-    .container { h1 {font-size: 2.3rem;margin: 0.6rem auto;} }
+    .container {
+      h1 {font-size: 2.3rem;margin: 0.6rem auto;}
+
+      .memory-game {
+        margin: 0.4rem auto;
+        grid-column-gap: 0.4rem;
+        width: 50%;
+      }
+
+      .memory-card {
+        width: 10rem;
+        height: 10rem;
+        margin: 0.3rem;
+      }
+    }
   }
 }
 
 @media (max-width: 768px) {
   .project4 {
-    .container { h1 {font-size: 2rem;margin: 0.5rem auto;} }
+    .container {
+      h1 {font-size: 2rem;margin: 0.5rem auto;}
+
+      .memory-game {
+        margin: 0.5rem auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 0.3rem;
+        width: 30%;
+      }
+      .memory-card {
+        width: 7rem;
+        height: 7rem;
+        margin: 0.2rem;
+      }
+    }
   }
 }

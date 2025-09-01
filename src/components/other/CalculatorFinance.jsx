@@ -109,7 +109,7 @@ export default function CalculatorFinance() {
             }}
             placeholder={t("project2.enter-rate")}
           />
-          {rate && (
+          { rate && (
             <button className="clear-btn" onClick={() => clearField("rate")}>{t("project2.clear")}</button>
           )}
         </div>
@@ -132,7 +132,7 @@ export default function CalculatorFinance() {
             placeholder={t("project2.enter-years")}
           />
 
-          {years && (
+          { years && (
             <button className="clear-btn" onClick={() => clearField("years")}>{t("project2.clear")}</button>
           )}
         </div>

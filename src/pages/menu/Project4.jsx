@@ -34,7 +34,6 @@ export const Project4 = () => {
   const siteUrl = import.meta.env.VITE_SITE_URL;
   useSpaCleanup();
 
-  // const [cards, setCards] = useState(initialCards);
   const [cards, setCards] = useState([...initialCards]);
   const [shuffledCards, setShuffledCards] = useState([]);
   const [flippedCards, setFlippedCards] = useState([]);
@@ -45,18 +44,26 @@ export const Project4 = () => {
     startNewGame();
   }, []);
 
-  const shuffleCards = () => {
-    return [...cards].sort(() => Math.random() - 0.5);
+  useEffect(() => {
+    const allMatched = shuffledCards.length > 0 && shuffledCards.every(c => c.matched);
+    if (allMatched) {
+      const playAgain = window.confirm(t("project4.playAgain"));
+      if (playAgain) {
+        startNewGame();
+      }
+    }
+  }, [shuffledCards]); // выполняется каждый раз при изменении shuffledCards
+
+  const shuffleCards = (cardsToShuffle = cards) => {
+    return [...cardsToShuffle].sort(() => Math.random() - 0.5);
   };
 
   const startNewGame = () => {
     const resetCards = initialCards.map(card => ({
-      ...card,
-      flipped: false,
-      matched: false,
+      ...card, flipped: false, matched: false,
     }));
     setCards(resetCards);
-    setShuffledCards(shuffleCards());
+    setShuffledCards(shuffleCards(resetCards)); // передаем resetCards
     setFlippedCards([]);
     setIsBlocked(false);
   };
@@ -92,15 +99,6 @@ export const Project4 = () => {
           setFlippedCards([]);
           setIsBlocked(false);
         }, 500);
-      }
-    }
-
-    // Check if all matched
-    const allMatched = newCards.every(c => c.matched);
-    if (allMatched) {
-      const playAgain = window.confirm(t("project4.playAgain"));
-      if (playAgain) {
-        startNewGame();
       }
     }
   };

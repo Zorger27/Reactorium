@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from 'react-i18next';
 import "@/components/other/CalculatorStandart.scss";
 
@@ -7,6 +7,15 @@ export default function CalculatorStandart() {
   const [input, setInput] = useState("");
   const [result, setResult] = useState("");
 
+  // Загружаем сохранённый результат при монтировании
+  useEffect(() => {
+    const savedResult = localStorage.getItem("calcStandardResult");
+    if (savedResult !== null) {
+      setResult(savedResult);
+      setInput(savedResult); // <- ключевое изменение
+    }
+  }, []);
+
   const handleClick = (value) => {
     setInput((prev) => prev + value);
   };
@@ -14,6 +23,7 @@ export default function CalculatorStandart() {
   const handleClear = () => {
     setInput("");
     setResult("");
+    localStorage.removeItem("calcStandardResult");
   };
 
   const handleBackspace = () => {
@@ -24,7 +34,9 @@ export default function CalculatorStandart() {
     try {
       // eslint-disable-next-line no-eval
       const evalResult = eval(input);
-      setResult(evalResult);
+      setResult(evalResult.toString());
+      localStorage.setItem("calcStandardResult", evalResult.toString());
+      setInput(evalResult.toString()); // теперь предыдущий результат остаётся в input
     } catch {
       setResult("Error");
     }

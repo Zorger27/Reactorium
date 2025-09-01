@@ -34,9 +34,15 @@ export default function CalculatorStandart() {
     try {
       // eslint-disable-next-line no-eval
       const evalResult = eval(input);
-      setResult(evalResult.toString());
-      localStorage.setItem("calcStandardResult", evalResult.toString());
-      setInput(evalResult.toString()); // теперь предыдущий результат остаётся в input
+
+      // проверяем деление на 0
+      if (!isFinite(evalResult)) {
+        setResult("🧐🤯💥⚠️😁");
+      } else {
+        setResult(evalResult.toString());
+        localStorage.setItem("calcStandardResult", evalResult.toString());
+        setInput(evalResult.toString());
+      }
     } catch {
       setResult("Error");
     }

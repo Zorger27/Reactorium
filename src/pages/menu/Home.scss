@@ -95,10 +95,11 @@
         gap: 1.5rem;
         margin: 2rem 1.5rem;
 
-        .project-card-link {
-          .project-card {
-            border-radius: 6px;
-            padding: 1.5rem;
+        .inner {
+          .project-card-link {
+            .project-card {
+              padding: 1.5rem;
+            }
           }
         }
       }
@@ -119,10 +120,11 @@
         gap: 1.2rem;
         margin: 1rem;
 
-        .project-card-link {
-          .project-card {
-            border-radius: 5px;
-            padding: 1.2rem;
+        .inner {
+          .project-card-link {
+            .project-card {
+              padding: 1.2rem;
+            }
           }
         }
       }

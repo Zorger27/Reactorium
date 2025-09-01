@@ -38,35 +38,30 @@ const Home = () => {
           {t('home.title')}
           <ToggleFooterButton />
         </h1>
-        {/*<p className="flex-center">{t('home.description')}</p>*/}
         <hr className="custom-line" />
         <div className="projects-grid">
           <Link to="/project1" className="project-card-link">
             <div className="project-card">
               <h3>{t('project1.name')}</h3>
               <p>{t('project1.disc')}</p>
-              <span className="arrow">➡️</span>
             </div>
           </Link>
           <Link to="/project2" className="project-card-link">
             <div className="project-card">
               <h3>{t('project2.name')}</h3>
               <p>{t('project2.disc')}</p>
-              <span className="arrow">➡️</span>
             </div>
           </Link>
           <Link to="/project3" className="project-card-link">
             <div className="project-card">
               <h3>{t('project3.name')}</h3>
               <p>{t('project3.disc')}</p>
-              <span className="arrow">➡️</span>
             </div>
           </Link>
           <Link to="/project4" className="project-card-link">
             <div className="project-card">
               <h3>{t('project4.name')}</h3>
               <p>{t('project4.disc')}</p>
-              <span className="arrow">➡️</span>
             </div>
           </Link>
         </div>

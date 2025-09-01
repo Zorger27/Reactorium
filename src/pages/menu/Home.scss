@@ -16,19 +16,6 @@
       color: #2c3e50;
     }
 
-    h3 {
-      color: seagreen;
-      margin-bottom: 1rem;
-      font-size: 1.8rem;
-      text-align: left;
-    }
-
-    p {
-      color: darkblue;
-      margin-bottom: 1rem;
-      font-size: 1.2rem;
-    }
-
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -43,40 +30,42 @@
         width: 100%;
 
         .project-card {
-          //background: white;
           background-image: url("@/assets/background/background04.webp");
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat;
-          border-radius: 8px;
+          border: 1px solid rgba(0, 0, 0, 0.5);
+          border-radius: 4px;
           padding: 2rem;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+          transition: box-shadow 0.3s ease-in-out, border 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
           cursor: pointer;
           position: relative;
           height: 100%;
           display: flex;
           flex-direction: column;
 
-          p {margin: 0; color: darkslategrey; text-align: left;}
-
-          .arrow {
-            position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
-            font-size: 1.5rem;
-            color: deepskyblue;
-            opacity: 0;
-            transform: translateX(-10px);
-            transition: all 0.3s ease;
+          h3 {
+            color: seagreen;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            text-align: left;
           }
+
+          p {margin: 0; color: darkslategrey; text-align: left;}
         }
 
         .project-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-
-          .arrow {opacity: 1;transform: translateX(0);}
+          background-image:
+            radial-gradient(at 0% 100%, hsla(28,100%, 74%,1) 0px, transparent 50%),
+            radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%),
+            radial-gradient(at 50% 50%, hsla(355,100%, 93%, 1) 0px, transparent 50%),
+            radial-gradient(at 79% 100%, hsla(242, 100%, 70%, 1) 0px, transparent 50%),
+            radial-gradient(at 0% 0%, hsla(343,100%, 76%, 1) 0px, transparent 50%);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+          border: 1px solid rgba(0, 0, 0, 0.3);
+          h3 {color: darkblue;}
+          p {color: black;}
         }
       }
     }
@@ -100,8 +89,6 @@
           .project-card {
             border-radius: 6px;
             padding: 1.5rem;
-
-            .arrow {font-size: 1.5rem;}
           }
         }
       }
@@ -126,8 +113,6 @@
           .project-card {
             border-radius: 5px;
             padding: 1.2rem;
-
-            .arrow {font-size: 1.3rem;}
           }
         }
       }

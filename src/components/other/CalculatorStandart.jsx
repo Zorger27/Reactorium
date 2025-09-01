@@ -12,7 +12,7 @@ export default function CalculatorStandart() {
     const savedResult = localStorage.getItem("calcStandardResult");
     if (savedResult !== null) {
       setResult(savedResult);
-      setInput(savedResult); // <- ключевое изменение
+      setInput(savedResult); // <- изменение
     }
   }, []);
 

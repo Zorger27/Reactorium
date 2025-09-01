@@ -58,7 +58,7 @@ export default function CalculatorStandart() {
         <button className="numbers" onClick={() => handleClick("1")}>1</button>
         <button className="numbers" onClick={() => handleClick("2")}>2</button>
         <button className="numbers" onClick={() => handleClick("3")}>3</button>
-        <button className="operator" className="equal" onClick={handleCalculate}>=</button>
+        <button className="equal" onClick={handleCalculate}>=</button>
 
         <button className="numbers zero" onClick={() => handleClick("0")}>0</button>
         <button className="dot" onClick={() => handleClick(".")}>.</button>

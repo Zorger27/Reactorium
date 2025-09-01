@@ -29,7 +29,7 @@ export default function CalculatorFinance() {
     const interestRate = parseFloat(rate) / 100;
     const time = parseInt(years);
 
-    if (isNaN(principal) || isNaN(interestRate) || isNaN(time)) {
+    if (isNaN(principal) || isNaN(interestRate) || isNaN(time) || principal < 100) {
       setResult(t("project2.message"));
       return;
     }
@@ -80,10 +80,7 @@ export default function CalculatorFinance() {
             step="100"
             value={amount}
             onChange={(e) => {
-              const value = e.target.value;
-              if (value === "" || Number(value) >= 100) {
-                setAmount(value);
-              }
+              setAmount(e.target.value); // сохраняем всё, что пользователь печатает
             }}
             placeholder={t("project2.enter-amount")}
           />

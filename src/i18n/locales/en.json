@@ -56,7 +56,9 @@
     "enter-years": "Enter years",
     "calculate": "Calculate",
     "future-value": "Future Value = ",
-    "message": "Please enter valid numbers"
+    "message": "Please enter valid numbers",
+    "clear": "Clear",
+    "clear-all": "Clear All"
   },
   "project3": {
     "name": "To-Do List",

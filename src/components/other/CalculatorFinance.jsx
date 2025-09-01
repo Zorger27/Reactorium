@@ -24,35 +24,75 @@ export default function CalculatorFinance() {
     setResult(futureValue.toFixed(2));
   };
 
+  const clearAll = () => {
+    setAmount("");
+    setRate("");
+    setYears("");
+    setResult(null);
+  };
+
   return (
     <div className="calculator-finance">
       <h2>{t("project2.finance-full")}</h2>
 
       <div className="form-group">
         <label>{t("project2.amount")}</label>
-        <input type="number" value={amount}
-          onChange={(e) => setAmount(e.target.value)}
-          placeholder={t("project2.enter-amount")}
-        />
+        <div className="input-with-clear">
+          <input
+            type="number"
+            value={amount}
+            step={100}
+            onChange={(e) => setAmount(e.target.value)}
+            placeholder={t("project2.enter-amount")}
+          />
+          {amount && (
+            <button className="clear-btn" onClick={() => setAmount("")}>
+              {t("project2.clear")}
+            </button>
+          )}
+        </div>
       </div>
 
       <div className="form-group">
         <label>{t("project2.rate")}</label>
-        <input type="number" value={rate}
-          onChange={(e) => setRate(e.target.value)}
-          placeholder={t("project2.enter-rate")}
-        />
+        <div className="input-with-clear">
+          <input
+            type="number"
+            value={rate}
+            onChange={(e) => setRate(e.target.value)}
+            placeholder={t("project2.enter-rate")}
+          />
+          {rate && (
+            <button className="clear-btn" onClick={() => setRate("")}>
+              {t("project2.clear")}
+            </button>
+          )}
+        </div>
       </div>
 
       <div className="form-group">
         <label>{t("project2.years")}</label>
-        <input type="number" value={years}
-          onChange={(e) => setYears(e.target.value)}
-          placeholder={t("project2.enter-years")}
-        />
+        <div className="input-with-clear">
+          <input
+            type="number"
+            value={years}
+            onChange={(e) => setYears(e.target.value)}
+            placeholder={t("project2.enter-years")}
+          />
+          {years && (
+            <button className="clear-btn" onClick={() => setYears("")}>
+              {t("project2.clear")}
+            </button>
+          )}
+        </div>
       </div>
 
-      <button onClick={calculate}>{t("project2.calculate")}</button>
+      <div className="button-group">
+        <button onClick={calculate}>{t("project2.calculate")}</button>
+        <button className="clear-all-btn" onClick={clearAll}>
+          {t("project2.clear-all")}
+        </button>
+      </div>
 
       {result !== null && (
         <div className="result">

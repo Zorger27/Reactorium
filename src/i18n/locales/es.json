@@ -56,7 +56,9 @@
     "enter-years": "Introduzca años",
     "calculate": "Calcular",
     "future-value": "Valor futuro = ",
-    "message": "Por favor, introduzca números válidos"
+    "message": "Por favor, introduzca números válidos",
+    "clear": "Borrar",
+    "clear-all": "Borrar Todo"
   },
   "project3": {
     "name": "Lista de tareas",

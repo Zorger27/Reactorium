@@ -35,8 +35,8 @@ export default function CalculatorStandart() {
       <h2>{t("project2.standard-full")}</h2>
 
       <div className="display">
-        <div className="input">{input || "0"}</div>
         <div className="output">{result}</div>
+        <div className="input">{input || "0"}</div>
       </div>
 
       <div className="buttons">

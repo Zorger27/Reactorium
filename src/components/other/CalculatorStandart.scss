@@ -3,7 +3,7 @@
   margin: 1rem auto;
   padding: 1.2rem;
   border-radius: 8px;
-  background: lightsteelblue;
+  background: #bbdaf3;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 
   h2 {
@@ -14,23 +14,34 @@
   }
 
   .display {
-    background: #1e1e1e;
-    color: #fff;
-    padding: 15px;
+    //background: #1e1e1e;
+    //color: #fff;
+    background: white;
+    border: 1px solid #ddd;
     border-radius: 8px;
+    padding: 0.4rem 0.75rem;
     text-align: right;
-    margin-bottom: 15px;
-
-    .input {
-      font-size: 18px;
-      color: #ccc;
-    }
+    margin-bottom: 1rem;
 
     .output {
-      font-size: 24px;
+      height: 3.3rem;
+      font-size: 2.3rem;
       font-weight: bold;
-      color: #fff;
+      text-overflow: ellipsis;
+      overflow-x: auto;
+      border-bottom: 2px solid #ddd;
     }
+
+    .input {
+      height: 1.3rem;
+      font-size: 0.9rem;
+      color: darkblue;
+      text-overflow: ellipsis;
+      overflow-x: auto;
+      //white-space: nowrap;
+      //overflow: hidden;
+    }
+
   }
 
   .buttons {

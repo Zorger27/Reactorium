@@ -2,8 +2,8 @@
   width: 400px;
   margin: 1rem auto;
   padding: 1.2rem;
-  border-radius: 8px;
-  background: #bbdaf3;
+  border-radius: 4px;
+  background: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 
   h2 {
@@ -18,7 +18,7 @@
     //color: #fff;
     background: white;
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 0.4rem 0.75rem;
     text-align: right;
     margin-bottom: 1rem;
@@ -26,6 +26,7 @@
     .output {
       height: 3.3rem;
       font-size: 2.3rem;
+      color: black;
       font-weight: bold;
       text-overflow: ellipsis;
       overflow-x: auto;
@@ -34,48 +35,106 @@
 
     .input {
       height: 1.3rem;
-      font-size: 0.9rem;
+      font-size: 1rem;
       color: darkblue;
       text-overflow: ellipsis;
       overflow-x: auto;
       //white-space: nowrap;
       //overflow: hidden;
     }
-
   }
 
   .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    gap: 0.7rem;
 
     button {
-      padding: 15px;
-      font-size: 1.2rem;
-      font-weight: 400;
-      border: none;
-      border-radius: 5px;
-      background: #f0f0f0;
+      padding: 0.7rem;
+      font-size: 1.8rem;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 3px;
       cursor: pointer;
-      transition: background 0.2s;
+      transition: font-weight .3s ease-in-out, background-color .3s ease, box-shadow .3s ease;
 
       &:hover {
-        background: #d9d9d9;
-        font-weight: 800;
+        background-color: #f1f1f1;
+        box-shadow: 3px 3px 4px 0 lightgrey;
+        font-weight: bold;
       }
 
       &.equal {
         grid-row: span 2;
-        background: #007bff;
         color: #fff;
+        border-color: darkblue;
+        background-color: darkblue;
+        transition: all .2s ease-in-out;
 
         &:hover {
-          background: #0056b3;
+          background-color: mediumblue;
+          border-color: mediumblue;
         }
       }
 
       &.zero {
         grid-column: span 2;
+      }
+
+      &.numbers {
+        background-image: url("@/assets/background/background08.webp");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      &.operator {
+        border-color: lightsteelblue;
+        background-color: lightsteelblue;
+        transition: all .3s ease-in-out;
+        color: white;
+
+        &:hover {
+          background-color: lightskyblue;
+          border-color: lightskyblue;
+        }
+      }
+
+      &.clear {
+        background-color: lightseagreen;
+        border-color: lightseagreen;
+        transition: all .3s ease-in-out;
+        color: white;
+
+        &:hover {
+          background-color: #4bd2ca;
+          border-color: #4bd2ca;
+        }
+      }
+
+      &.dot {
+        border-color: steelblue;
+        background-color: steelblue;
+        transition: all .3s ease-in-out;
+        color: white;
+
+        &:hover {
+          background-color: deepskyblue;
+          border-color: deepskyblue;
+        }
+      }
+
+      &.backspace {
+        border-color: darkred;
+        background-color: darkred;
+        transition: all .3s ease-in-out;
+        color: white;
+
+        &:hover {
+          background-color: lightcoral;
+          border-color: lightcoral;
+          font-weight: bold;
+        }
       }
     }
   }
@@ -107,6 +166,31 @@
     h2 {
       font-size: 1.4rem;
       margin-bottom: 0.6rem;
+    }
+
+    .display {
+      border-radius: 4px;
+      padding: 0.3rem 0.75rem;
+      margin-bottom: 0.8rem;
+
+      .output {
+        height: 2.8rem;
+        font-size: 1.8rem;
+      }
+
+      .input {
+        height: 1.2rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    .buttons {
+      gap: 0.5rem;
+
+      button {
+        padding: 0.7rem;
+        font-size: 1.6rem;
+      }
     }
   }
 }

@@ -1,13 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from 'react-i18next';
 import "@/components/other/CalculatorFinance.scss";
 
 export default function CalculatorFinance() {
   const { t } = useTranslation();
-  const [amount, setAmount] = useState("");
-  const [rate, setRate] = useState("");
-  const [years, setYears] = useState("");
+
+  // значения берём сначала из localStorage, если они есть
+  const [amount, setAmount] = useState(localStorage.getItem("finance_amount") || "");
+  const [rate, setRate] = useState(localStorage.getItem("finance_rate") || "");
+  const [years, setYears] = useState(localStorage.getItem("finance_years") || "");
   const [result, setResult] = useState(null);
+
+  // сохраняем значения в localStorage при изменении
+  useEffect(() => {
+    localStorage.setItem("finance_amount", amount);
+  }, [amount]);
+
+  useEffect(() => {
+    localStorage.setItem("finance_rate", rate);
+  }, [rate]);
+
+  useEffect(() => {
+    localStorage.setItem("finance_years", years);
+  }, [years]);
 
   const calculate = () => {
     const principal = parseFloat(amount);
@@ -24,11 +39,32 @@ export default function CalculatorFinance() {
     setResult(futureValue.toFixed(2));
   };
 
+  // очистка конкретного поля
+  const clearField = (field) => {
+    if (field === "amount") {
+      setAmount("");
+      localStorage.removeItem("finance_amount");
+    }
+    if (field === "rate") {
+      setRate("");
+      localStorage.removeItem("finance_rate");
+    }
+    if (field === "years") {
+      setYears("");
+      localStorage.removeItem("finance_years");
+    }
+    setResult(null);
+  };
+
+  // очистить всё
   const clearAll = () => {
     setAmount("");
     setRate("");
     setYears("");
     setResult(null);
+    localStorage.removeItem("finance_amount");
+    localStorage.removeItem("finance_rate");
+    localStorage.removeItem("finance_years");
   };
 
   return (
@@ -46,9 +82,7 @@ export default function CalculatorFinance() {
             placeholder={t("project2.enter-amount")}
           />
           {amount && (
-            <button className="clear-btn" onClick={() => setAmount("")}>
-              {t("project2.clear")}
-            </button>
+            <button className="clear-btn" onClick={() => clearField("amount")}>{t("project2.clear")}</button>
           )}
         </div>
       </div>
@@ -63,9 +97,7 @@ export default function CalculatorFinance() {
             placeholder={t("project2.enter-rate")}
           />
           {rate && (
-            <button className="clear-btn" onClick={() => setRate("")}>
-              {t("project2.clear")}
-            </button>
+            <button className="clear-btn" onClick={() => clearField("rate")}>{t("project2.clear")}</button>
           )}
         </div>
       </div>
@@ -80,9 +112,7 @@ export default function CalculatorFinance() {
             placeholder={t("project2.enter-years")}
           />
           {years && (
-            <button className="clear-btn" onClick={() => setYears("")}>
-              {t("project2.clear")}
-            </button>
+            <button className="clear-btn" onClick={() => clearField("years")}>{t("project2.clear")}</button>
           )}
         </div>
       </div>

@@ -17,7 +17,12 @@ export default function CalculatorStandart() {
   }, []);
 
   const handleClick = (value) => {
-    setInput((prev) => prev + value);
+    // Заменяем символы на правильные для eval
+    const correctedValue = value
+      .replace('÷', '/')
+      .replace('×', '*')
+      .replace('−', '-');
+    setInput((prev) => prev + correctedValue);
   };
 
   const handleClear = () => {
@@ -32,16 +37,24 @@ export default function CalculatorStandart() {
 
   const handleCalculate = () => {
     try {
+      // Заменяем символы перед вычислением
+      const expression = input
+        .replace(/÷/g, '/')
+        .replace(/×/g, '*')
+        .replace(/−/g, '-');
+
       // eslint-disable-next-line no-eval
-      const evalResult = eval(input);
+      const evalResult = eval(expression);
 
       // проверяем деление на 0
       if (!isFinite(evalResult)) {
         setResult("🧐🤯💥⚠️😁");
       } else {
-        setResult(evalResult.toString());
-        localStorage.setItem("calcStandardResult", evalResult.toString());
-        setInput(evalResult.toString());
+        // Округляем до 2 знаков, но убираем лишние нули
+        const resultStr = parseFloat(evalResult.toFixed(2)).toString();
+        setResult(resultStr);
+        localStorage.setItem("calcStandardResult", resultStr);
+        setInput(resultStr);
       }
     } catch {
       setResult("Error");

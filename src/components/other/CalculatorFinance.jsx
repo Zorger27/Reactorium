@@ -76,12 +76,18 @@ export default function CalculatorFinance() {
         <div className="input-with-clear">
           <input
             type="number"
+            min="100"
+            step="100"
             value={amount}
-            step={100}
-            onChange={(e) => setAmount(e.target.value)}
+            onChange={(e) => {
+              const value = e.target.value;
+              if (value === "" || Number(value) >= 100) {
+                setAmount(value);
+              }
+            }}
             placeholder={t("project2.enter-amount")}
           />
-          {amount && (
+          { amount && (
             <button className="clear-btn" onClick={() => clearField("amount")}>{t("project2.clear")}</button>
           )}
         </div>
@@ -92,8 +98,15 @@ export default function CalculatorFinance() {
         <div className="input-with-clear">
           <input
             type="number"
+            min="0.01"
+            step="any"
             value={rate}
-            onChange={(e) => setRate(e.target.value)}
+            onChange={(e) => {
+              const value = e.target.value;
+              if (value === "" || Number(value) > 0) {
+                setRate(value);
+              }
+            }}
             placeholder={t("project2.enter-rate")}
           />
           {rate && (
@@ -107,10 +120,18 @@ export default function CalculatorFinance() {
         <div className="input-with-clear">
           <input
             type="number"
+            min="1"
+            step="1"
             value={years}
-            onChange={(e) => setYears(e.target.value)}
+            onChange={(e) => {
+              const value = e.target.value;
+              if (value === "" || Number(value) >= 1) {
+                setYears(value);
+              }
+            }}
             placeholder={t("project2.enter-years")}
           />
+
           {years && (
             <button className="clear-btn" onClick={() => clearField("years")}>{t("project2.clear")}</button>
           )}

@@ -90,13 +90,12 @@
       p {margin-bottom: 0.8rem;font-size: 1.1rem;}
 
       .projects-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 1.5rem;
         margin: 2rem 1.5rem;
 
         .inner {
           .project-card-link {
+            max-width: 22rem;
             .project-card {
               padding: 1.5rem;
             }
@@ -115,15 +114,14 @@
       p {margin: 0.1rem 0.5rem;font-size: 1rem;}
 
       .projects-grid {
-        display: grid;
-        grid-template-columns: 1fr;
         gap: 1.2rem;
         margin: 1rem;
 
         .inner {
           .project-card-link {
+            max-width: 20rem;
             .project-card {
-              padding: 1.2rem;
+              padding: 1.4rem;
             }
           }
         }

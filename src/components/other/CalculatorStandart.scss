@@ -30,7 +30,8 @@
       font-weight: bold;
       text-overflow: ellipsis;
       overflow-x: auto;
-      border-bottom: 2px solid #ddd;
+      //border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid lightgray;
     }
 
     .input {

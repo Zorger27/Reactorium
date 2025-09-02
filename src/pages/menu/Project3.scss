@@ -181,7 +181,7 @@
       h1 {font-size: 2rem;margin: 0.5rem auto;}
 
       .table {
-        width: 370px;
+        min-width: 370px;
         display: inline-flex;
         justify-content: center;
         flex-direction: column;

@@ -39,7 +39,9 @@
   },
   "project1": {
     "name": "Cubo",
-    "disc": "Dinámica, geometría y un poco de magia 3D"
+    "disc": "Dinámica, geometría y un poco de magia 3D",
+    "cube-js": "JS",
+    "cube-css": "CSS"
   },
   "project2": {
     "name": "Calculadora",

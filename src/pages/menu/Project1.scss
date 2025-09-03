@@ -3,6 +3,7 @@
   background: linear-gradient(to bottom, rgb(255, 249, 229), rgb(255, 240, 244)) no-repeat center;
 
   .container {
+
     h1 {
       display: flex;
       justify-content: center;
@@ -11,91 +12,33 @@
       font-size: 2.5rem;
       margin: 0.7rem auto;
       color: black;
-    }
 
-    .cube-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      perspective: 2000px;
-      width: 100%;
-      height: 73vh;
-      overflow: hidden;
+      .mode-switch {
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0.3rem 0 0.7rem;
+        gap: 0.7rem;
 
-      .cube {
-        position: relative;
-        transform-style: preserve-3d;
-        transform-origin: center center;
-        transition: transform 0.3s ease;
-        animation: 120s rotate infinite linear;
-
-        .face {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          box-sizing: border-box;
-          //opacity: 0.8;
-        }
-
-        //.front { background-color: #3498db; }
-        //.back { background-color: #e74c3c; }
-        //.left { background-color: #2ecc71; }
-        //.right { background-color: #f39c12; }
-        //.top { background-color: #9b59b6; }
-        //.bottom { background-color: #34495e; }
-
-        .front {
-          background-image: url("@/assets/img/cube/front.webp");
+        button {
+          padding: 0.5rem 1rem;
+          color: black;
+          background-image: url("@/assets/background/background05.webp");
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat;
-        }
-        .back {
-          background-image: url("@/assets/img/cube/back.webp");
-          background-position: center;
-          background-size: cover;
-          background-repeat: no-repeat;
-        }
-        .left {
-          background-image: url("@/assets/img/cube/left.webp");
-          background-position: center;
-          background-size: cover;
-          background-repeat: no-repeat;
-        }
-        .right {
-          background-image: url("@/assets/img/cube/right.webp");
-          background-position: center;
-          background-size: cover;
-          background-repeat: no-repeat;
-        }
-        .top {
-          background-image: url("@/assets/img/cube/top.webp");
-          background-position: center;
-          background-size: cover;
-          background-repeat: no-repeat;
-        }
-        .bottom {
-          background-image: url("@/assets/img/cube/bottom.webp");
-          background-position: center;
-          background-size: cover;
-          background-repeat: no-repeat;
-        }
+          border: 1px solid grey;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 1.4rem;
+          font-weight: bold;
+          transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 
-        @keyframes rotate {
-          0% {
-            transform: rotateX(0) rotateY(0) rotateZ(0);
-          }
-          25% {
-            transform: rotateX(900deg) rotateY(1800deg) rotateZ(450deg);
-          }
-          50% {
-            transform: rotateX(1800deg) rotateY(3600deg) rotateZ(900deg);
-          }
-          75% {
-            transform: rotateX(2700deg) rotateY(5400deg) rotateZ(1350deg);
-          }
-          100% {
-            transform: rotateX(3600deg) rotateY(7200deg) rotateZ(1800deg);
+          &:hover {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            border: 1px solid lightslategrey;
           }
         }
       }
@@ -105,12 +48,46 @@
 
 @media(max-width: 1020px) {
   .project1 {
-    .container { h1 {font-size: 2.3rem;margin: 0.6rem auto;} }
+    .container {
+      h1 {
+        font-size: 2.3rem;
+        margin: 0.6rem auto;
+
+        .mode-switch {
+          margin: 0 0.2rem 0 0.5rem;
+          gap: 0.5rem;
+
+          button {
+            padding: 0.4rem 0.8rem;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: bold;
+          }
+        }
+      }
+    }
   }
 }
 
 @media (max-width: 768px) {
   .project1 {
-    .container { h1 {font-size: 2rem;margin: 0.5rem auto;} }
+    .container {
+      h1 {
+        font-size: 2rem;
+        margin: 0.5rem auto;
+
+        .mode-switch {
+          margin: 0 0.1rem 0 0.4rem;
+          gap: 0.3rem;
+
+          button {
+            padding: 0.4rem 0.4rem;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: normal;
+          }
+        }
+      }
+    }
   }
 }

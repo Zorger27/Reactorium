@@ -19,8 +19,8 @@
     .projects-grid {
       display: inline-flex;
       flex-wrap: wrap;
-      gap: 1.8rem;
-      margin: 3rem 2rem;
+      gap: 1rem;
+      margin: 1rem;
       justify-content: center;
       align-items: center;
 
@@ -29,6 +29,7 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
+        margin: 0;
 
         .project-card-link {
           max-width: 27rem;

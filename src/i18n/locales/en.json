@@ -6,14 +6,7 @@
   },
   "header": {
     "headerImage": "Main menu! \uD83D\uDE0D",
-    "headerAbout": "Go to About page",
-    "main": "Main",
-    "projects": "Projects",
-    "prg01": "Cube",
-    "prg02": "Calculator",
-    "prg03": "Affairs",
-    "prg04": "Memory Game",
-    "about": "About"
+    "headerAbout": "Go to About page"
   },
   "footer": {
     "develop": "Developed by ",
@@ -34,6 +27,8 @@
   "home": {
     "title": "Welcome!",
     "description": "Here are my React projects and information about them. \uD83D\uDE09",
+    "main": "Main",
+    "projects": "Projects",
     "name": "Reactorium",
     "disc": "This is the Project's Main Page"
   },
@@ -100,9 +95,9 @@
     "more04": "\uD83D\uDE80 Reactorium is where modern technologies meet simple and engaging ideas. It’s a project about turning code into useful tools and little joys.",
     "more05": "Welcome! \uD83E\uDD29\uD83D\uDE0E",
     "technologies": "The used technologies",
-    "name": "Name",
+    "name-prg": "Name",
     "version": "Version",
-    "nameOG": "About",
+    "name": "About",
     "disc": "Detailed project information"
   },
   "page404": {

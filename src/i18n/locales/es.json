@@ -6,14 +6,7 @@
   },
   "header": {
     "headerImage": "¡Menú principal! \uD83D\uDE0D",
-    "headerAbout": "Ir a la página Sobre",
-    "main": "Principal",
-    "projects": "Proyectos",
-    "prg01": "Cubo",
-    "prg02": "Calculadora",
-    "prg03": "Asuntos",
-    "prg04": "Juego de memoria",
-    "about": "Sobre"
+    "headerAbout": "Ir a la página Sobre"
   },
   "footer": {
     "develop": "Desarrollado por ",
@@ -34,6 +27,8 @@
   "home": {
     "title": "¡Bienvenido!",
     "description": "Aquí están mis proyectos React e información sobre ellos. \uD83D\uDE09",
+    "main": "Principal",
+    "projects": "Proyectos",
     "name": "Reactorium",
     "disc": "Esta es la página principal del proyecto"
   },
@@ -100,9 +95,9 @@
     "more04": "\uD83D\uDE80 Reactorium es el lugar donde la tecnología moderna se une con ideas simples y atractivas. Es un proyecto sobre cómo el código puede convertirse en herramientas útiles y pequeñas alegrías.",
     "more05": "¡Bienvenido! \uD83E\uDD29\uD83D\uDE0E",
     "technologies": "Las tecnologías utilizadas",
-    "name": "Nombre",
+    "name-prg": "Nombre",
     "version": "Versión",
-    "nameOG": "Sobre",
+    "name": "Sobre",
     "disc": "Información detallada del proyecto"
   },
   "page404": {

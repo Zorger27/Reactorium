@@ -51,9 +51,9 @@ export default function handler(req, res) {
         es: { title: "Calculadora", desc: "En versión estándar y finanzas (creado por Anatolii Zorin)" }
       },
       project3: {
-        en: { title: "To-Do List", desc: "Your personal assistant with data persistence (created by Anatolii Zorin)" },
-        uk: { title: "Список справ", desc: "Особистий помічник із збереженням даних (створено Анатолієм Зоріним)" },
-        es: { title: "Lista de tareas", desc: "Tu asistente personal con guardado de datos (creado por Anatolii Zorin)" }
+        en: { title: "Affairs", desc: "Your personal assistant with data persistence (created by Anatolii Zorin)" },
+        uk: { title: "Справи", desc: "Особистий помічник із збереженням даних (створено Анатолієм Зоріним)" },
+        es: { title: "Asuntos", desc: "Tu asistente personal con guardado de datos (creado por Anatolii Zorin)" }
       },
       project4: {
         en: { title: "Memory Game", desc: "A fun challenge that you’ll want to play again (created by Anatolii Zorin)" },

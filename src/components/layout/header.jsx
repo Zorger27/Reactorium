@@ -75,23 +75,23 @@ const Header = () => {
       <div ref={menuRef} className={`menu ${showMenu ? 'is-active' : ''}`}
         onClick={(e) => e.stopPropagation()} // клики внутри не закрывают меню
       >
-        <Link to="/" onClick={closeAll}>{t('header.main')}</Link>
+        <Link to="/" onClick={closeAll}>{t('home.main')}</Link>
 
         <div className={`menu-item ${showProjects ? 'open' : ''}`}>
           <a className="menu-toggle" onClick={toggleProjects} aria-expanded={showProjects} aria-controls="projects-submenu">
-            {t('header.projects')}
+            {t('home.projects')}
             <span><i className={`fa ${showProjects ? 'fa-caret-up' : 'fa-caret-down'}`} /></span>
           </a>
 
           <div id="projects-submenu" className="submenu" aria-hidden={!showProjects}>
-            <Link to="/project1" onClick={closeAll}>{t('header.prg01')}</Link>
-            <Link to="/project2" onClick={closeAll}>{t('header.prg02')}</Link>
-            <Link to="/project3" onClick={closeAll}>{t('header.prg03')}</Link>
-            <Link to="/project4" onClick={closeAll}>{t('header.prg04')}</Link>
+            <Link to="/project1" onClick={closeAll}>{t('project1.name')}</Link>
+            <Link to="/project2" onClick={closeAll}>{t('project2.name')}</Link>
+            <Link to="/project3" onClick={closeAll}>{t('project3.name')}</Link>
+            <Link to="/project4" onClick={closeAll}>{t('project4.name')}</Link>
           </div>
         </div>
 
-        <Link to="/about" onClick={closeAll}>{t('header.about')}</Link>
+        <Link to="/about" onClick={closeAll}>{t('about.name')}</Link>
       </div>
     </header>
   );

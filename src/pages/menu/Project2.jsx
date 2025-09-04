@@ -11,8 +11,8 @@ import ToggleFooterButton from "@/components/util/ToggleFooterButton.jsx";
 export const Project2 = () => {
   const { t } = useTranslation();
   const siteUrl = import.meta.env.VITE_SITE_URL;
-
   useSpaCleanup();
+
   const [mode, setMode] = useState("standard"); // "standard" | "finance"
 
   // Загружаем сохранённый режим при первом рендере

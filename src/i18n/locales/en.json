@@ -65,17 +65,23 @@
   "project3": {
     "name": "To-Do List",
     "disc": "Your personal assistant with data persistence",
+    "todo": "Список справ",
+    "notes": "Нотатки",
     "add-task": "Add task",
+    "add-note": "Додати нотатку",
     "add": "Add",
     "task": "Task Name",
+    "note": "Нотатка",
     "status": "Status",
+    "modified": "Змінено",
     "done": "Done",
     "in-progress": "In progress",
     "actions": "Actions",
     "edit": "Edit",
     "delete": "Delete",
     "delete-msg": "Are you sure you want to do this? \uD83E\uDDD0\uD83D\uDE32\uD83D\uDE09",
-    "delete-all": "Delete all tasks"
+    "delete-all-tasks": "Delete all tasks",
+    "delete-all-notes": "Видалити всі нотатки"
   },
   "project4": {
     "name": "Memory Game",

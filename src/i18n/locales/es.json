@@ -65,17 +65,23 @@
   "project3": {
     "name": "Lista de tareas",
     "disc": "Tu asistente personal con guardado de datos",
+    "todo": "Список справ",
+    "notes": "Нотатки",
     "add-task": "Añadir tarea",
+    "add-note": "Додати нотатку",
     "add": "Añadir",
     "task": "Nombre de tarea",
+    "note": "Нотатка",
     "status": "Estatus",
+    "modified": "Змінено",
     "done": "Hecho",
     "in-progress": "En progreso",
     "actions": "Acciones",
     "edit": "Corregir",
     "delete": "Borrar",
     "delete-msg": "¿Estás seguro de que quieres hacer esto? \uD83E\uDDD0\uD83D\uDE32\uD83D\uDE09",
-    "delete-all": "Borrar todas las tareas"
+    "delete-all-tasks": "Borrar todas las tareas",
+    "delete-all-notes": "Видалити всі нотатки"
   },
   "project4": {
     "name": "Juego de memoria",

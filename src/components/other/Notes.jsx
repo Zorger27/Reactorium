@@ -7,7 +7,7 @@ export default function Notes() {
 
   return (
     <div className="notes">
-      <h1>Здесь будет Notes</h1>
+      <h1 style={{color: "darkmagenta"}}>Здесь будет Notes</h1>
     </div>
   )
 }

@@ -11,7 +11,7 @@
     "projects": "Projects",
     "prg01": "Cube",
     "prg02": "Calculator",
-    "prg03": "To-Do List",
+    "prg03": "Affairs",
     "prg04": "Memory Game",
     "about": "About"
   },
@@ -63,17 +63,17 @@
     "clear-all": "Clear All"
   },
   "project3": {
-    "name": "To-Do List",
+    "name": "Affairs",
     "disc": "Your personal assistant with data persistence",
-    "todo": "Список справ",
-    "notes": "Нотатки",
+    "todo": "Todo list",
+    "notes": "Notes",
     "add-task": "Add task",
-    "add-note": "Додати нотатку",
+    "add-note": "Add note",
     "add": "Add",
     "task": "Task Name",
-    "note": "Нотатка",
+    "note": "The note",
     "status": "Status",
-    "modified": "Змінено",
+    "modified": "Modified",
     "done": "Done",
     "in-progress": "In progress",
     "actions": "Actions",
@@ -81,7 +81,7 @@
     "delete": "Delete",
     "delete-msg": "Are you sure you want to do this? \uD83E\uDDD0\uD83D\uDE32\uD83D\uDE09",
     "delete-all-tasks": "Delete all tasks",
-    "delete-all-notes": "Видалити всі нотатки"
+    "delete-all-notes": "Delete all notes"
   },
   "project4": {
     "name": "Memory Game",

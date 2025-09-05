@@ -1,13 +1,24 @@
-import React, {useMemo, useCallback, useState} from "react";
+import React, {useMemo, useCallback, useState, useEffect } from "react";
 import { useTranslation } from 'react-i18next';
 import "@/components/other/CubeJS.scss";
 
 export default function CubeJS() {
   const { t } = useTranslation();
 
-  const [scale, setScale] = useState(1);
+  // const [scale, setScale] = useState(1);
   // const [rotationX] = useState(1);
   // const [rotationY] = useState(1);
+
+  // читаем сохранённый scale из localStorage или ставим 1
+  const [scale, setScale] = useState(() => {
+    const saved = localStorage.getItem("cube-scale");
+    return saved ? parseFloat(saved) : 1;
+  });
+
+  // сохраняем в localStorage при каждом изменении
+  useEffect(() => {
+    localStorage.setItem("cube-scale", scale.toString());
+  }, [scale]);
 
   // вычисляем размеры
   const calculatedCubeSize = useMemo(() => `${150 * scale}px`, [scale]);
@@ -26,13 +37,31 @@ export default function CubeJS() {
     });
   }, []);
 
+  // кнопки управления
+  const handleReset = () => setScale(1);
+  const handleIncrease = () =>
+    setScale((prev) => Math.min(2, parseFloat((prev + 0.1).toFixed(1))));
+  const handleDecrease = () =>
+    setScale((prev) => Math.max(0.5, parseFloat((prev - 0.1).toFixed(1))));
+
   return (
     <div className="inner-container">
       <div className="cube-scale">
-        <label htmlFor="scale">{t('project1.scale')}</label>
-        <input type="range" min="0.5" max="2" step="0.1" value={scale}
-               onChange={(e) => setScale(parseFloat(e.target.value))}
-        />
+        <label htmlFor="scale">{t("project1.scale")}</label>
+        <div className="controls">
+          <button onClick={handleDecrease}>–</button>
+          <input
+            type="range"
+            min="0.5"
+            max="2"
+            step="0.1"
+            value={scale}
+            onChange={(e) => setScale(parseFloat(e.target.value))}
+          />
+          <button onClick={handleIncrease}>+</button>
+          <button onClick={handleReset}>Х</button>
+        </div>
+        <div className="scale-value">{scale.toFixed(1)}x</div>
       </div>
       <div className="cube-js-container" onWheel={handleWheel}>
         {/*<div className="cube" style={{width: calculatedCubeSize, height: calculatedCubeSize, transform: `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`,}}>*/}

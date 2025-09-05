@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from 'react-i18next';
 import { Helmet } from '@dr.pogodin/react-helmet';
 import '@/pages/menu/Project1.scss';
@@ -14,16 +14,6 @@ export const Project1 = () => {
   useSpaCleanup();
 
   const [mode, setMode] = useState("cube-js"); // "cube-js" | "cube-css"
-  const [scale, setScale] = useState(1);
-
-  const handleScaleChange = useCallback((deltaY) => {
-    setScale((prev) => {
-      let next = prev - deltaY * 0.001;
-      if (next < 0.5) next = 0.5;
-      if (next > 2) next = 2;
-      return next;
-    });
-  }, []);
 
   // Загружаем сохранённый режим при первом рендере
   useEffect(() => {
@@ -72,16 +62,10 @@ export const Project1 = () => {
 
           <ToggleFooterButton />
 
-          {mode === "cube-js" && (
-            <input type="range" min="0.5" max="2" step="0.1" value={scale}
-                   onChange={(e) => setScale(parseFloat(e.target.value))}
-            />
-          )}
-
         </h1>
         <hr className="custom-line" />
 
-        {mode === "cube-js" && <CubeJS scale={scale} onScaleChange={handleScaleChange} />}
+        {mode === "cube-js" && <CubeJS />}
         {mode === "cube-css" && <CubeCSS />}
 
       </div>

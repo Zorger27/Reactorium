@@ -36,7 +36,8 @@
     "name": "Куб",
     "disc": "Динаміка, геометрія й трішки 3D-магії",
     "cube-js": "JS",
-    "cube-css": "CSS"
+    "cube-css": "CSS",
+    "scale": "Масштаб"
   },
   "project2": {
     "name": "Калькулятор",

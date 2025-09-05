@@ -36,7 +36,8 @@
     "name": "Cube",
     "disc": "Dynamics, geometry, and a touch of 3D magic",
     "cube-js": "JS",
-    "cube-css": "CSS"
+    "cube-css": "CSS",
+    "scale": "Scale"
   },
   "project2": {
     "name": "Calculator",

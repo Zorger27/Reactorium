@@ -180,6 +180,7 @@
 @media (max-width: 768px) {
   .notes {
     .table {
+      width: 377px;
       display: inline-flex;
       justify-content: center;
       font-size: 1rem;
@@ -219,6 +220,19 @@
 
       .txt {display: none;}
       .icon {display: inline-block;}
+
+      thead {
+        .fa-pen-to-square {
+          color: rebeccapurple;
+          cursor: default;
+          font-size: 1.3rem;
+        }
+        .fa-file-medical {
+          color: green;
+          cursor: default;
+          font-size: 1.3rem;
+        }
+      }
 
       tfoot { .danger {font-size: 1.1rem;} }
     }

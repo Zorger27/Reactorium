@@ -105,8 +105,14 @@ export default function Notes() {
           <tr>
             <th>№</th>
             <th>{t("project3.note")}</th>
-            <th>{t("project3.modified")}</th>
-            <th>{t("project3.actions")}</th>
+            <th>
+              <span className="icon"><i className="fas fa-pen-to-square"></i></span>
+              <span className="txt">{t("project3.modified")}</span>
+            </th>
+            <th>
+              <span className="icon"><i className="fas fa-file-medical"></i></span>
+              <span className="txt">{t("project3.actions")}</span>
+            </th>
           </tr>
           </thead>
           <tbody>

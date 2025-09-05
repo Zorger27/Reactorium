@@ -162,7 +162,7 @@
 @media (max-width: 768px) {
   .todo-list {
     .table {
-      //width: 377px;
+      width: 377px;
       display: inline-flex;
       justify-content: center;
       flex-direction: column;
@@ -179,7 +179,7 @@
           max-width: 200px;
         }
       }
-      .action {max-width: 50px;}
+      .action {width: 20px; font-size: 0.5rem}
 
       form {
         input[type="text"] {
@@ -196,6 +196,7 @@
       .btn {
         font-size: 1rem;
         padding: 0.3rem;
+        //margin: 0;
         margin: 3px 3px;
       }
 
@@ -206,6 +207,11 @@
         .fa-check-circle {
           //color: steelblue;
           color: rebeccapurple;
+          cursor: default;
+          font-size: 1.3rem;
+        }
+        .fa-file-medical {
+          color: green;
           cursor: default;
           font-size: 1.3rem;
         }

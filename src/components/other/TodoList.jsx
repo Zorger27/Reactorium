@@ -94,7 +94,10 @@ export default function TodoList() {
               <span className="icon"><i className="fas fa-check-circle"></i></span>
               <span className="txt">{t("project3.status")}</span>
             </th>
-            <th>{t("project3.actions")}</th>
+            <th>
+              <span className="icon"><i className="fas fa-file-medical"></i></span>
+              <span className="txt">{t("project3.actions")}</span>
+            </th>
           </tr>
           </thead>
           <tbody>

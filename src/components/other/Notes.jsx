@@ -1,16 +1,15 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from 'react-i18next';
 import "@/components/other/Notes.scss";
 
 export default function Notes() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [notes, setNotes] = useState([]);
   const [newNote, setNewNote] = useState("");
-  const [currentDate, setCurrentDate] = useState(new Date());
 
   // форматирование даты с учетом локали
-  const formatDate = useCallback(() => {
-    const locale = localStorage.getItem("user-locale") ?? "en";
+  const formatDate = (date = new Date()) => {
+    const lang = i18n.language || "en";
     const dateOptions = {
       weekday: "long",
       year: "numeric",
@@ -21,14 +20,14 @@ export default function Notes() {
       hour12: false,
     };
 
-    if (locale === "es") {
-      return currentDate.toLocaleDateString("es-ES", dateOptions);
-    } else if (locale === "ua") {
-      return currentDate.toLocaleDateString("uk-UA", dateOptions);
+    if (lang.startsWith("es")) {
+      return date.toLocaleDateString("es-ES", dateOptions);
+    } else if (lang.startsWith("uk") || lang.startsWith("ua")) {
+      return date.toLocaleDateString("uk-UA", dateOptions);
     } else {
-      return currentDate.toLocaleDateString("en-US", dateOptions);
+      return date.toLocaleDateString("en-US", dateOptions);
     }
-  }, [currentDate]);
+  };
 
   // загрузка заметок
   useEffect(() => {
@@ -55,14 +54,12 @@ export default function Notes() {
       updatedAt: formatDate(),
     };
 
-    setCurrentDate(new Date());
     saveNotes([...notes, newItem]);
     setNewNote("");
   };
 
   const editNote = (note) => {
     note.editing = false;
-    setCurrentDate(new Date());
     note.updatedAt = formatDate();
     saveNotes([...notes]);
   };

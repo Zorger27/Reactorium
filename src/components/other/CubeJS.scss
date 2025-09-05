@@ -18,7 +18,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: -5px;
+      //margin-top: -5px;
       gap: 5px;
 
       .slider-button {
@@ -38,7 +38,6 @@
 
         &:hover {background-color: #45a049;}
         &:active {background-color: #3d8b40;}
-
       }
 
       .minus {background-color: #f44336;}
@@ -49,9 +48,11 @@
         background-color: #3656f4;
         border-radius: 4px;
         margin: 0 0.2rem;
+
+        &:hover {background-color: #334dc8;}
+        &:active {background-color: #1b2a75;}
       }
-      .reset:hover {background-color: #334dc8;}
-      .reset:active {background-color: #1b2a75;}
+
     }
 
     .scale-value {
@@ -159,14 +160,40 @@
   .inner-container {
     .cube-scale {
       margin: 0.5rem auto 0;
-      padding: 0.4rem 1.3rem;
+      padding: 0.4rem 1.2rem;
       border-radius: 13px;
       label {
         font-size: 1.6rem;
         font-weight: bold;
-        margin-right: 0.5rem;
+        margin-right: 0.4rem;
+      }
+      .controls {
+        //margin-top: -5px;
+        gap: 4px;
+
+        .slider-button {
+          width: 22px;
+          height: 22px;
+          border: none;
+          border-radius: 50%;
+          font-size: 18px;
+        }
+
+        .reset {
+          border-radius: 3px;
+          margin: 0 0.2rem;
+        }
+      }
+
+      .scale-value {
+        margin-left: 0.3rem;
+        padding: 0.2rem 0.5rem;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 6px;
       }
     }
+
     .cube-js-container {
       perspective: 2000px;
       height: 66vh;
@@ -178,14 +205,40 @@
   .inner-container {
     .cube-scale {
       margin: 0.4rem auto 0;
-      padding: 0.4rem 1rem;
-      border-radius: 11px;
+      padding: 0.4rem 0.7rem;
+      border-radius: 10px;
       label {
         font-size: 1.3rem;
         font-weight: normal;
-        margin-right: 0.4rem;
+        margin-right: 0.3rem;
+      }
+      .controls {
+        //margin-top: -5px;
+        gap: 3px;
+
+        .slider-button {
+          width: 22px;
+          height: 22px;
+          border: none;
+          border-radius: 50%;
+          font-size: 18px;
+        }
+
+        .reset {
+          border-radius: 3px;
+          margin: 0 0.1rem;
+        }
+      }
+
+      .scale-value {
+        margin-left: 0.2rem;
+        padding: 0.2rem 0.2rem;
+        font-size: 18px;
+        font-weight: normal;
+        border-radius: 6px;
       }
     }
+
     .cube-js-container {
       perspective: 2000px;
       height: 66vh;

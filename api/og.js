@@ -46,9 +46,9 @@ export default function handler(req, res) {
         es: { title: "Cubo", desc: "Dinámica, geometría y un poco de magia 3D (creado por Anatolii Zorin)" }
       },
       project2: {
-        en: { title: "Calculator", desc: "Both standard and finance modes (created by Anatolii Zorin)" },
+        en: { title: "Calculator", desc: "Both standard and financial mode, for any tasks (created by Anatolii Zorin)" },
         uk: { title: "Калькулятор", desc: "І стандартний, і фінансовий, для будь-яких завдань (створено Анатолієм Зоріним)" },
-        es: { title: "Calculadora", desc: "En versión estándar y finanzas (creado por Anatolii Zorin)" }
+        es: { title: "Calculadora", desc: "En versión estándar y finanzas, para cualquier tarea (creado por Anatolii Zorin)" }
       },
       project3: {
         en: { title: "Affairs", desc: "Your personal assistant with data persistence (created by Anatolii Zorin)" },

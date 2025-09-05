@@ -40,7 +40,7 @@
   },
   "project2": {
     "name": "Calculator",
-    "disc": "Both standard and finance modes",
+    "disc": "Both standard and financial mode, for any tasks",
     "standard": "Standard",
     "standard-full": "Standard calculator",
     "finance": "Finance",

@@ -85,6 +85,7 @@ export default function Notes() {
   return (
     <div className="notes">
       <div className="table">
+        <h2>{t("project3.notes")}</h2>
         <table>
           <thead>
           <tr>

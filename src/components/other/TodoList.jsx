@@ -74,6 +74,7 @@ export default function TodoList() {
   return (
     <div className="todo-list">
       <div className="table">
+        <h2>{t("project3.todo")}</h2>
         <table>
           <thead>
           <tr>

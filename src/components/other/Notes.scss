@@ -1,6 +1,7 @@
 .notes {
   .table {
     display: inline-flex;
+    flex-direction: column;
     font-size: 2rem;
     padding: 1rem;
     margin: 1rem 1rem 1.5rem;
@@ -11,6 +12,7 @@
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 
+    h2 {color: darkblue}
     tr, td, th {border: 1px solid #ddd;padding: 0.5rem;word-wrap: normal}
 
     form {

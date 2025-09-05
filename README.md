@@ -8,8 +8,8 @@
 
 ✨️ <ins>Each one is unique and covers different aspects of development — from visual experiments to practical tools:</ins><br>
 🧊 Rotating Cube — 3D animation with size control.<br>
-🧮 Calculator — both standard and finance modes.<br>
-📝 To-Do List — with data persistence in LocalStorage.<br>
+🧮 Calculator — both standard and finance modes, for any tasks.<br>
+📝 Affairs — with data persistence in LocalStorage.<br>
 🎲 Memory Game — a dynamic card-matching game.
 
 #### 🔥 The project is powered by a solid stack of modern technologies that make development fast, efficient, and scalable. ####

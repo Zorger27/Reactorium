@@ -11,8 +11,58 @@
     label {
       font-size: 1.8rem;
       font-weight: bold;
-      color: darkcyan;
+      color: darkblue;
       margin-right: 0.5rem;
+    }
+    .controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: -5px;
+      gap: 5px;
+
+      .slider-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        border: none;
+        border-radius: 50%;
+        background-color: #4CAF50;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {background-color: #45a049;}
+        &:active {background-color: #3d8b40;}
+
+      }
+
+      .minus {background-color: #f44336;}
+      .minus:hover {background-color: #da190b;}
+      .minus:active {background-color: #b71c1c;}
+
+      .reset {
+        background-color: #3656f4;
+        border-radius: 4px;
+        margin: 0 0.2rem;
+      }
+      .reset:hover {background-color: #334dc8;}
+      .reset:active {background-color: #1b2a75;}
+    }
+
+    .scale-value {
+      margin-left: 0.5rem;
+      padding: 0.2rem 0.5rem;
+      font-size: 20px;
+      font-weight: bold;
+      color: darkblue;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      border-radius: 8px;
+      //box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
     }
   }
   .cube-js-container {

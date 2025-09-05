@@ -194,14 +194,14 @@
       margin: 0.5rem 0.8rem 0.9rem 0.4rem;
 
       .text {
-        max-width: 200px;
+        max-width: 230px;
         textarea {
           font-size: 1rem;
-          max-width: 125px;
+          max-width: 200px;
         }
       }
-      .updatedAt {font-size: 0.8rem;width: 40px;}
-      .action {max-width: 50px;}
+      .updatedAt {width: 50px; font-size: 0.8rem;}
+      .action {width: 20px; font-size: 0.5rem}
 
       form {
         textarea {

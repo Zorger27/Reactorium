@@ -103,7 +103,7 @@ export default function Notes() {
             <th>№</th>
             <th>{t("project3.note")}</th>
             <th>
-              <span className="icon"><i className="fas fa-pen-to-square"></i></span>
+              <span className="icon"><i className="fas fa-clock"></i></span>
               <span className="txt">{t("project3.modified")}</span>
             </th>
             <th>

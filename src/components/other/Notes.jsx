@@ -135,38 +135,27 @@ export default function Notes() {
               <td className="action">
                 {!note.editing && (
                   <>
-                    <button
-                      className="btn norm txt"
-                      onClick={() => {
+                    <button className="btn norm txt" onClick={() => {
                         note.editing = true;
                         saveNotes([...notes]);
                       }}
                     >
                       {t("project3.edit")}
                     </button>
-                    <button
-                      className="btn norm icon"
-                      onClick={() => {
+                    <button className="btn norm icon" onClick={() => {
                         note.editing = true;
                         saveNotes([...notes]);
                       }}
-                      title="Edit..."
+                      title={t("project3.edit")}
                     >
                       <i className="fas fa-edit"></i>
                     </button>
                   </>
                 )}
-                <button
-                  className="btn danger txt"
-                  onClick={() => deleteNote(index)}
-                >
+                <button className="btn danger txt" onClick={() => deleteNote(index)}>
                   {t("project3.delete")}
                 </button>
-                <button
-                  className="btn danger icon"
-                  onClick={() => deleteNote(index)}
-                  title="Delete..."
-                >
+                <button className="btn danger icon" onClick={() => deleteNote(index)} title={t("project3.delete")}>
                   <i className="fas fa-trash"></i>
                 </button>
               </td>

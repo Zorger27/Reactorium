@@ -13,7 +13,7 @@ export const Project3 = () => {
   const siteUrl = import.meta.env.VITE_SITE_URL;
   useSpaCleanup();
 
-  const [mode, setMode] = useState("todo-list"); // "todo-list" | "notes"
+  const [mode, setMode] = useState("todo-list");
 
   // Загружаем сохранённый режим при первом рендере
   useEffect(() => {

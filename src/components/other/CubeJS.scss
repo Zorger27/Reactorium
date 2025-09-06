@@ -63,32 +63,39 @@
       gap: 5px;
 
       .slider-button {
+        $hover-color: lightseagreen;
         display: flex;
         align-items: center;
         justify-content: center;
         background: transparent;
         border: none;
-        color: lightseagreen;
+        color: $hover-color;
         font-size: 1.6rem;
         cursor: pointer;
         transition: color 0.3s;
 
-        &:hover {color: darkgreen;}
-        &:active {color: darkgreen;}
+        &:hover {color: darken($hover-color, 10%);}
+        &:active {color: darken($hover-color, 20%);}
       }
 
-      .minus {color: deeppink; transition: color 0.3s;}
-      .minus:hover, .minus:active {color: darkred;}
+      .minus {
+        $hover-color: deeppink;
+        color: $hover-color;
+        transition: color 0.3s;
+
+        &:hover {color: darken($hover-color, 10%);}
+        &:active {color: darken($hover-color, 20%);}
+      }
 
       .reset {
+        $hover-color: red;
         color: blue;
         transition: color 0.3s;
         margin: 0 0.2rem;
 
-        &:hover {color: darkblue;}
-        &:active {color: darkblue;}
+        &:hover {color: $hover-color;}
+        &:active {color: darken($hover-color, 10%);}
       }
-
     }
 
     .scale-value {

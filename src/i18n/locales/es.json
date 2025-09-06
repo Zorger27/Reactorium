@@ -37,7 +37,10 @@
     "disc": "Dinámica, geometría y un poco de magia 3D",
     "cube-js": "JS",
     "cube-css": "CSS",
-    "scale": "Escala"
+    "scale": "Escala",
+    "decrease": "Disminuir",
+    "increase": "Incrementar",
+    "reset": "Restablecer a 1.0"
   },
   "project2": {
     "name": "Calculadora",

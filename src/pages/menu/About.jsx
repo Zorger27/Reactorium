@@ -9,8 +9,8 @@ import ToggleFooterButton from "@/components/util/ToggleFooterButton.jsx";
 export const About = () => {
   const { t } = useTranslation();
   const siteUrl = import.meta.env.VITE_SITE_URL;
-
   useSpaCleanup();
+
   const [showMore, setShowMore] = useState(false);
   const [tableView, setTableView] = useState(false);
   const infoList = useSelector((state) => state.info);

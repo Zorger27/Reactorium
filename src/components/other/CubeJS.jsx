@@ -49,7 +49,7 @@ export default function CubeJS() {
       <div className="cube-scale">
         <label htmlFor="scale">{t("project1.scale")}</label>
         <div className="controls">
-          <button className="slider-button minus" onClick={handleDecrease}>–</button>
+          <button className="slider-button minus" onClick={handleDecrease}><i className="fas fa-magnifying-glass-minus" /></button>
           <input
             type="range"
             min="0.5"
@@ -58,8 +58,8 @@ export default function CubeJS() {
             value={scale}
             onChange={(e) => setScale(parseFloat(e.target.value))}
           />
-          <button className="slider-button plus" onClick={handleIncrease}>+</button>
-          <button className="slider-button reset" onClick={handleReset}>Х</button>
+          <button className="slider-button plus" onClick={handleIncrease}><i className="fas fa-magnifying-glass-plus" /></button>
+          <button className="slider-button reset" onClick={handleReset}><i className="fas fa-undo" /></button>
         </div>
         <div className="scale-value">{scale.toFixed(1)}x</div>
       </div>

@@ -18,39 +18,33 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      //margin-top: -5px;
       gap: 5px;
 
       .slider-button {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 24px;
-        height: 24px;
+        background: transparent;
         border: none;
-        border-radius: 50%;
-        background-color: #4CAF50;
-        color: white;
-        font-size: 20px;
-        font-weight: bold;
+        color: lightseagreen;
+        font-size: 1.6rem;
         cursor: pointer;
-        transition: background-color 0.3s;
+        transition: color 0.3s;
 
-        &:hover {background-color: #45a049;}
-        &:active {background-color: #3d8b40;}
+        &:hover {color: darkgreen;}
+        &:active {color: darkgreen;}
       }
 
-      .minus {background-color: #f44336;}
-      .minus:hover {background-color: #da190b;}
-      .minus:active {background-color: #b71c1c;}
+      .minus {color: deeppink; transition: color 0.3s;}
+      .minus:hover, .minus:active {color: darkred;}
 
       .reset {
-        background-color: #3656f4;
-        border-radius: 4px;
+        color: blue;
+        transition: color 0.3s;
         margin: 0 0.2rem;
 
-        &:hover {background-color: #334dc8;}
-        &:active {background-color: #1b2a75;}
+        &:hover {color: darkblue;}
+        &:active {color: darkblue;}
       }
 
     }
@@ -59,7 +53,7 @@
       background: linear-gradient(to bottom, rgb(229, 251, 255), rgb(255, 240, 244)) no-repeat center;
       margin-left: 0.5rem;
       padding: 0.2rem 0.5rem;
-      font-size: 20px;
+      font-size: 1.4rem;
       font-weight: bold;
       color: darkblue;
       border: 1px solid rgba(0, 0, 0, 0.3);
@@ -169,27 +163,16 @@
         margin-right: 0.4rem;
       }
       .controls {
-        //margin-top: -5px;
         gap: 4px;
 
-        .slider-button {
-          width: 22px;
-          height: 22px;
-          border: none;
-          border-radius: 50%;
-          font-size: 18px;
-        }
-
-        .reset {
-          border-radius: 3px;
-          margin: 0 0.2rem;
-        }
+        .slider-button {font-size: 1.4rem;}
+        .reset {margin: 0 0.2rem;}
       }
 
       .scale-value {
         margin-left: 0.3rem;
         padding: 0.2rem 0.5rem;
-        font-size: 18px;
+        font-size: 1.2rem;
         font-weight: bold;
         border-radius: 6px;
       }
@@ -206,7 +189,7 @@
   .inner-container {
     .cube-scale {
       margin: 0.4rem auto 0;
-      padding: 0.4rem 0.7rem;
+      padding: 0.4rem 0.6rem;
       border-radius: 10px;
       label {
         font-size: 1.3rem;
@@ -214,27 +197,16 @@
         margin-right: 0.3rem;
       }
       .controls {
-        //margin-top: -5px;
         gap: 4px;
 
-        .slider-button {
-          width: 20px;
-          height: 20px;
-          border: none;
-          border-radius: 50%;
-          font-size: 16px;
-        }
-
-        .reset {
-          border-radius: 3px;
-          margin: 0 0.3rem;
-        }
+        .slider-button {font-size: 1.3rem;}
+        .reset {margin: 0 0.3rem;}
       }
 
       .scale-value {
         margin-left: 0.3rem;
         padding: 0.2rem 0.2rem;
-        font-size: 16px;
+        font-size: 0.9rem;
         font-weight: normal;
         border-radius: 6px;
       }

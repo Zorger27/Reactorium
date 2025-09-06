@@ -74,8 +74,8 @@
         cursor: pointer;
         transition: color 0.3s;
 
-        &:hover {color: darken($hover-color, 10%);}
-        &:active {color: darken($hover-color, 20%);}
+        &:hover {color: darken($hover-color, 15%);}
+        &:active {color: darken($hover-color, 25%);}
       }
 
       .minus {
@@ -83,18 +83,18 @@
         color: $hover-color;
         transition: color 0.3s;
 
-        &:hover {color: darken($hover-color, 10%);}
-        &:active {color: darken($hover-color, 20%);}
+        &:hover {color: darken($hover-color, 15%);}
+        &:active {color: darken($hover-color, 25%);}
       }
 
       .reset {
         $hover-color: red;
         color: blue;
-        transition: color 0.3s;
         margin: 0 0.2rem;
+        transition: color 0.3s, text-shadow 0.3s;
 
-        &:hover {color: $hover-color;}
-        &:active {color: darken($hover-color, 10%);}
+        &:hover {color: $hover-color; text-shadow: 2px 2px 4px black;}
+        &:active {color: darken($hover-color, 10%); text-shadow: 2px 2px 4px black;}
       }
     }
 

@@ -14,6 +14,48 @@
       color: darkblue;
       margin-right: 0.5rem;
     }
+
+    input[type="range"] {
+      width: 200px;
+      height: 6px;
+      -webkit-appearance: none; // убираем стандартный стиль
+      background: transparent; // чтобы фон не мешал
+
+      // трек (полоска)
+      &::-webkit-slider-runnable-track {
+        height: 6px;
+        background: linear-gradient(to right, #4caf50, #2196f3); // зелёно-синяя
+        border-radius: 3px;
+      }
+
+      &::-moz-range-track {
+        height: 6px;
+        background: linear-gradient(to right, #4caf50, #2196f3);
+        border-radius: 3px;
+      }
+
+      // бегунок (кружок)
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 16px;
+        height: 16px;
+        background: #fff;
+        border: 2px solid #4caf50;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-top: -5px; // центрируем по полоске
+      }
+
+      &::-moz-range-thumb {
+        width: 16px;
+        height: 16px;
+        background: #fff;
+        border: 2px solid #4caf50;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+
     .controls {
       display: flex;
       align-items: center;
@@ -162,6 +204,23 @@
         font-weight: bold;
         margin-right: 0.4rem;
       }
+
+      input[type="range"] {
+        width: 150px;
+        height: 5px;
+
+        &::-webkit-slider-thumb {
+          width: 14px;
+          height: 14px;
+          margin-top: -4.5px;
+        }
+
+        &::-moz-range-thumb {
+          width: 14px;
+          height: 14px;
+        }
+      }
+
       .controls {
         gap: 4px;
 
@@ -196,6 +255,23 @@
         font-weight: normal;
         margin-right: 0.3rem;
       }
+
+      input[type="range"] {
+        width: 120px;
+        height: 4px;
+
+        //&::-webkit-slider-thumb {
+        //  width: 12px;
+        //  height: 12px;
+        //  margin-top: -4px;
+        //}
+        //
+        //&::-moz-range-thumb {
+        //  width: 12px;
+        //  height: 12px;
+        //}
+      }
+
       .controls {
         gap: 4px;
 

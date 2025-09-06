@@ -4,11 +4,10 @@
 
 ![01 Screen 07-09-2025](https://github.com/user-attachments/assets/ee00f7a7-0ac8-4e5d-8f80-a2e45e55462e)
 
-
 #### 🚀 Reactorium (a blend of "React" (the UI library) and "laboratorium" (Latin for "laboratory, a place for experiments"), meaning "React laboratory") — a secret laboratory of React experiments, where each application holds a surprise crafted from lines of code and a touch of magic! ####
 
 ✨️ <ins>Each one is unique and covers different aspects of development — from visual experiments to practical tools:</ins><br>
-🧊 Rotating Cube — 3D animation with size control.<br>
+🧊 Cube — 3D animation with size control.<br>
 🧮 Calculator — both standard and finance modes, for any tasks.<br>
 📝 Affairs — with data persistence in LocalStorage.<br>
 🎲 Memory Game — a dynamic card-matching game.

@@ -5,10 +5,6 @@ import "@/components/other/CubeJS.scss";
 export default function CubeJS() {
   const { t } = useTranslation();
 
-  // const [scale, setScale] = useState(1);
-  // const [rotationX] = useState(1);
-  // const [rotationY] = useState(1);
-
   // читаем сохранённый scale из localStorage или ставим 1
   const [scale, setScale] = useState(() => {
     const saved = localStorage.getItem("cube-scale");
@@ -21,10 +17,12 @@ export default function CubeJS() {
   }, [scale]);
 
   // вычисляем размеры
-  const calculatedCubeSize = useMemo(() => `${150 * scale}px`, [scale]);
+  const baseSize = 150;
+  const halfSize = baseSize / 2; // 75
+  const calculatedCubeSize = useMemo(() => `${baseSize * scale}px`, [scale]);
   const calculatedTranslateZ = useMemo(() => `${scale}px`, [scale]);
-  const calculatedTranslateZBack = useMemo(() => `${150 * scale}px`, [scale]);
-  const calculatedTranslateZSide = useMemo(() => `${75 * scale}px`, [scale]);
+  const calculatedTranslateZBack = useMemo(() => `${baseSize * scale}px`, [scale]);
+  const calculatedTranslateZSide = useMemo(() => `${halfSize * scale}px`, [scale]);
 
   // обработка прокрутки мыши
   const handleWheel = useCallback((e) => {
@@ -64,7 +62,6 @@ export default function CubeJS() {
         <div className="scale-value">{scale.toFixed(1)}x</div>
       </div>
       <div className="cube-js-container" onWheel={handleWheel}>
-        {/*<div className="cube" style={{width: calculatedCubeSize, height: calculatedCubeSize, transform: `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`,}}>*/}
         <div className="cube" style={{width: calculatedCubeSize, height: calculatedCubeSize}}>
           <div className="face front" style={{ transform: `translateZ(${calculatedTranslateZ})` }}/>
           <div className="face back" style={{transform: `rotateY(180deg) translateZ(${calculatedTranslateZBack})`,}}/>

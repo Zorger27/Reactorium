@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .inner-container {
   .cube-scale {
     display: inline-flex;
@@ -63,28 +65,28 @@
       gap: 5px;
 
       .slider-button {
-        $hover-color: lightseagreen;
+        $color: lightseagreen;
         display: flex;
         align-items: center;
         justify-content: center;
         background: transparent;
         border: none;
-        color: $hover-color;
+        color: $color;
         font-size: 1.6rem;
         cursor: pointer;
         transition: color 0.3s;
 
-        &:hover {color: darken($hover-color, 15%);}
-        &:active {color: darken($hover-color, 25%);}
+        &:hover {color: color.adjust($color, $lightness: -15%);}
+        &:active {color: color.adjust($color, $lightness: -20%);}
       }
 
       .minus {
-        $hover-color: deeppink;
-        color: $hover-color;
+        $color: deeppink;
+        color: $color;
         transition: color 0.3s;
 
-        &:hover {color: darken($hover-color, 15%);}
-        &:active {color: darken($hover-color, 25%);}
+        &:hover {color: color.adjust($color, $lightness: -15%);}
+        &:active {color: color.adjust($color, $lightness: -20%);}
       }
 
       .reset {
@@ -94,7 +96,7 @@
         transition: color 0.3s, text-shadow 0.3s;
 
         &:hover {color: $hover-color; text-shadow: 2px 2px 4px black;}
-        &:active {color: darken($hover-color, 10%); text-shadow: 2px 2px 4px black;}
+        &:active {color: color.adjust($hover-color, $lightness: -10%); text-shadow: 2px 2px 4px black;}
       }
     }
 

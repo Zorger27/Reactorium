@@ -61,7 +61,7 @@ export default defineConfig(({ mode }) => {
       Sitemap({
         hostname: siteUrl,
         dynamicRoutes: [
-          '/',
+          // '/',
           '/about',
           '/project1',
           '/project2',

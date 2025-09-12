@@ -60,16 +60,43 @@ export default defineConfig(({ mode }) => {
       }),
       Sitemap({
         hostname: siteUrl,
+        // убираем '/' из dynamicRoutes, если вдруг плагин сам включает корневой маршрут
         dynamicRoutes: [
-          // '/',
           '/about',
           '/project1',
           '/project2',
           '/project3',
           '/project4'
         ],
-        readable: true
+        // исключаем дубли, на всякий случай
+        exclude: [
+          // можно явно указать, например, "/404" или пути, которые не должны быть в sitemap
+        ],
+        readable: true,
+        // можно настроить более реалистичные priority и changefreq:
+        changefreq: {
+          '*': 'weekly',
+          '/about': 'monthly'
+          // или так: changefreq: 'weekly'
+        },
+        priority: {
+          '*': 0.5,
+          '/about': 0.8
+        },
+        lastmod: new Date(), // или можно задать вручную
+        generateRobotsTxt: true
       })
+      // Sitemap({
+      //   hostname: siteUrl,
+      //   dynamicRoutes: [
+      //     '/about',
+      //     '/project1',
+      //     '/project2',
+      //     '/project3',
+      //     '/project4'
+      //   ],
+      //   readable: true
+      // })
     ],
     resolve: {
       alias: {

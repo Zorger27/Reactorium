@@ -75,13 +75,21 @@ export default defineConfig(({ mode }) => {
         readable: true,
         // можно настроить более реалистичные priority и changefreq:
         changefreq: {
-          '*': 'weekly',
-          '/about': 'monthly'
+          '*': 'dayly',
+          '/about': 'monthly',
+          '/project1': 'weekly',
+          '/project2': 'weekly',
+          '/project3': 'weekly',
+          '/project4': 'weekly'
           // или так: changefreq: 'weekly'
         },
         priority: {
-          '*': 0.5,
-          '/about': 0.8
+          '*': 1.0,
+          '/about': 0.8,
+          '/project1': 0.6,
+          '/project2': 0.6,
+          '/project3': 0.6,
+          '/project4': 0.6
         },
         lastmod: new Date(), // или можно задать вручную
         generateRobotsTxt: true

@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://reactorium-zorger.vercel.app/sitemap.xml

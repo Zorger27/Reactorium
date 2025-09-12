@@ -80,7 +80,8 @@ export default defineConfig(({ mode }) => {
           '/project4': 'weekly'
         },
         priority: {
-          '*': 1.0,
+          // '*': 1.0,
+          '/': 1.0,
           '/about': 0.8,
           '/project1': 0.6,
           '/project2': 0.6,

@@ -72,7 +72,7 @@ export default defineConfig(({ mode }) => {
         ],
         readable: true,
         changefreq: {
-          '*': 'daily',
+          '/': 'daily',
           '/about': 'monthly',
           '/project1': 'weekly',
           '/project2': 'weekly',
@@ -80,7 +80,6 @@ export default defineConfig(({ mode }) => {
           '/project4': 'weekly'
         },
         priority: {
-          // '*': 1.0,
           '/': 1.0,
           '/about': 0.8,
           '/project1': 0.6,

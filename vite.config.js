@@ -87,7 +87,7 @@ export default defineConfig(({ mode }) => {
           '/project3': 0.6,
           '/project4': 0.6
         },
-        lastmod: new Date(), // или можно задать вручную
+        // lastmod: new Date(), // или можно задать вручную
         generateRobotsTxt: true
       })
     ],

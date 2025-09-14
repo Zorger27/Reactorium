@@ -22,7 +22,7 @@ const initialState = [
   {
     id: 4,
     title: 'Vite',
-    version: '7.0.6',
+    version: '7.1.5',
     url: 'https://vitejs.dev',
   },
   {

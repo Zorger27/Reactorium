@@ -8,10 +8,10 @@
 
   .container {
     h1 {
-      display: flex;
+      display: inline-block;
       justify-content: center;
       align-items: center;
-      flex-wrap: wrap;
+      //flex-wrap: wrap;
       font-size: 2.5rem;
       margin: 0.7rem auto;
       color: mediumvioletred;
@@ -38,9 +38,10 @@
       }
 
       .about-tech {
+        margin-bottom: 0.6rem;
         .card-info {
           display: inline-flex;
-          padding: 1rem;
+          padding: 0.6rem 0.7rem;
           max-width: 30rem;
           transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
           a {
@@ -121,12 +122,13 @@
         }
 
         .about-tech {
+          margin-bottom: 0.5rem;
           .tech-title{
             font-size: 2rem;
             margin: 0.4rem 0 0;
           }
           .card-info {
-            padding: 0.8rem;
+            padding: 0.5rem 0.6rem;
             .card-link {padding: 0.8rem;font-size: 1rem;}
           }
           .table {
@@ -158,12 +160,13 @@
         }
 
         .about-tech {
+          margin-bottom: 0.4rem;
           .tech-title{
             font-size: 1.7rem;
             margin: 0.3rem 0 0;
           }
           .card-info {
-            padding: 0.6rem;
+            padding: 0.4rem 0.5rem;
             .card-link {font-size: 0.8rem;padding: 0.6rem;}
           }
           .table {

@@ -5,9 +5,12 @@
   margin: 0 0.5rem;
   cursor: pointer;
   font-size: 2.5rem;
+  transition: text-shadow .3s ease-in-out;
 
   .fa.fa-toggle-on {color: darkgoldenrod;}
   .fa.fa-toggle-off {color: mediumseagreen;}
+
+  &:hover {text-shadow: 2px 2px 4px black;}
 }
 
 @media(max-width: 1020px) {

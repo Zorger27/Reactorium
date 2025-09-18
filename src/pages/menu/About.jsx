@@ -73,18 +73,21 @@ export const About = () => {
         <div className="about-content">
           <section className="about-description">
             <hr className="custom-line" />
-            <h2 className="more" onClick={() => setShowMore(!showMore)}>
-              {t('about.more01')}
-              <i className="fas fa-hand-pointer" />
-            </h2>
-            {showMore && (
-              <>
+
+            {!showMore ? (
+              <h2 className="more" onClick={() => setShowMore(true)}>
+                {t('about.more01')}
+                <i className="fas fa-hand-pointer" />
+              </h2>
+            ) : (
+              <div className="more-text" onClick={() => setShowMore(false)}>
                 <p>{t('about.more02')}</p>
                 <p>{t('about.more03')}</p>
                 <p>{t('about.more04')}</p>
                 <h3>{t('about.more05')}</h3>
-              </>
+              </div>
             )}
+
             <hr className="custom-line" />
           </section>
 

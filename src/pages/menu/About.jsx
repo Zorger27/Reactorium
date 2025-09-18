@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import '@/pages/menu/About.scss';
@@ -14,6 +14,29 @@ export const About = () => {
   const [showMore, setShowMore] = useState(false);
   const [tableView, setTableView] = useState(false);
   const infoList = useSelector((state) => state.info);
+
+  // Загружаем состояния при монтировании
+  useEffect(() => {
+    const savedShowMore = localStorage.getItem("about_showMore");
+    if (savedShowMore !== null) {
+      setShowMore(savedShowMore === "true");
+    }
+
+    const savedTableView = localStorage.getItem("about_tableView");
+    if (savedTableView !== null) {
+      setTableView(savedTableView === "true");
+    }
+  }, []);
+
+  // Сохраняем showMore при изменении
+  useEffect(() => {
+    localStorage.setItem("about_showMore", String(showMore));
+  }, [showMore]);
+
+  // Сохраняем tableView при изменении
+  useEffect(() => {
+    localStorage.setItem("about_tableView", String(tableView));
+  }, [tableView]);
 
   return (
     <div className="about">

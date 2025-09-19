@@ -1,18 +1,32 @@
-import React from 'react';
-import { Helmet } from '@dr.pogodin/react-helmet';
+import { useEffect } from "react";
 
-const GoogleAnalytics = ({ id }) => (
-  <Helmet>
-    <script async src={`https://www.googletagmanager.com/gtag/js?id=${id}`} />
-    <script>
-      {`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '${id}');
-      `}
-    </script>
-  </Helmet>
-);
+export default function GoogleAnalytics({ id }) {
+  useEffect(() => {
+    if (!id) return;
 
-export default GoogleAnalytics;
+    // Проверяем, не подключён ли уже gtag.js
+    if (!document.querySelector(`script[src*="googletagmanager.com/gtag/js?id=${id}"]`)) {
+      const gaScript = document.createElement("script");
+      gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
+      gaScript.async = true;
+      document.head.appendChild(gaScript);
+    }
+
+    // Создаём и инициализируем через window
+    const inlineScript = document.createElement("script");
+    inlineScript.innerHTML = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', '${id}');
+    `;
+    document.head.appendChild(inlineScript);
+
+    return () => {
+      inlineScript.remove();
+    };
+  }, [id]);
+
+  return null;
+}

@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import {BrowserRouter as Router, Routes, Route, useLocation, Navigate} from 'react-router-dom';
-import { HelmetProvider } from '@dr.pogodin/react-helmet';
 import Canonical from '@/components/seo/Canonical.jsx';
 import GoogleAnalytics from '@/components/seo/GoogleAnalytics.jsx';
 
@@ -71,11 +70,9 @@ const AppLayout = () => {
 };
 
 const App = () => (
-  <HelmetProvider>
     <Router>
       <AppLayout />
     </Router>
-  </HelmetProvider>
 );
 
 export default App;

@@ -2,9 +2,9 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import '@/pages/menu/Home.scss';
-import {Helmet} from "@dr.pogodin/react-helmet";
 import {useSpaCleanup} from "@/hooks/useSpaCleanup.js";
 import ToggleFooterButton from "@/components/util/ToggleFooterButton.jsx";
+import MetaTags from "@/components/seo/MetaTags.jsx";
 
 import Project1 from "@/assets/img/main/cube.webp"
 import Project2 from "@/assets/img/main/сalculator1.jpg"
@@ -19,24 +19,27 @@ const Home = () => {
 
   return (
     <div className="home">
-      <Helmet>
-        <title>{t('home.name')}</title>
-        <meta name="description" content={t('home.disc')} />
 
-        {/* Open Graph meta tags */}
-        <meta property="og:title" content={t('home.name')} />
-        <meta property="og:description" content={t('home.disc')} />
-        <meta property="og:image" content={`${siteUrl}/ogimage/home.jpg`} />
-        <meta property="og:url" content={siteUrl} />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content={siteUrl} />
+      <MetaTags
+        mainTitle={t('home.name')}
+        metaTags={[
+          { name: "description", content: t('home.disc') },
 
-        {/* Twitter meta tags */}
-        <meta property="twitter:title" content={t('home.name')} />
-        <meta property="twitter:description" content={t('home.disc')} />
-        <meta property="twitter:image" content={`${siteUrl}/ogimage/home.jpg`} />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Helmet>
+          // Open Graph meta tags
+          { property: "og:title", content: t('home.name') },
+          { property: "og:description", content: t('home.disc') },
+          { property: "og:image", content: `${siteUrl}/ogimage/home.jpg` },
+          { property: "og:url", content: `${siteUrl}` },
+          { property: "og:type", content: "website" },
+          { property: "og:site_name", content: `${siteUrl}` },
+
+          // Twitter meta tags
+          { property: "twitter:title", content: t('home.name') },
+          { property: "twitter:description", content: t('home.disc') },
+          { property: "twitter:image", content: `${siteUrl}/ogimage/home.jpg` },
+          { name: "twitter:card", content: "summary_large_image" },
+        ]}
+      />
 
       <div className="container">
         <h1>

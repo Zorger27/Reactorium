@@ -61,9 +61,9 @@ export default function handler(req, res) {
         es: { title: "Juego de memoria", desc: "Un reto divertido al que querrás volver a jugar (creado por Anatolii Zorin)" }
       },
       about: {
-        en: { title: "About", desc: "Detailed project information (created by Anatolii Zorin)" },
-        uk: { title: "Про проект", desc: "Детальна інформація про проект (створено Анатолієм Зоріним)" },
-        es: { title: "Sobre", desc: "Información detallada del proyecto (creado por Anatolii Zorin)" }
+        en: { title: "About", desc: "Detailed information about Reactorium (created by Anatolii Zorin)" },
+        uk: { title: "Про проект", desc: "Детальна інформація про Reactorium (створено Анатолієм Зоріним)" },
+        es: { title: "Sobre", desc: "Información detallada sobre Reactorium (creado por Anatolii Zorin)" }
       },
       page404: {
         en: { title: "Page Not Found", desc: "Page 404 - page not found (created by Anatolii Zorin)" },

@@ -22,8 +22,8 @@ const AppLayout = () => {
 
   // Исключаем API маршруты и статические файлы из React Router
   const isApiRoute = location.pathname.startsWith('/api') ||
-    location.pathname === '/robots.txt' ||
-    location.pathname === '/sitemap.xml';
+    location.pathname.endsWith('.txt') ||
+    location.pathname.endsWith('.xml');
 
   const [isFooterHidden, setIsFooterHidden] = useState(false);
 

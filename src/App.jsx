@@ -60,7 +60,7 @@ const AppLayout = () => {
             <Route path="/404" element={<PageNotFound />} />
 
             {/* Обработка неизвестных маршрутов */}
-            {/*<Route path="*" element={<Navigate to="/404" replace />} />*/}
+            <Route path="*" element={<Navigate to="/404" replace />} />
 
           </Routes>
         </main>

@@ -1,56 +1,22 @@
 {
   "version": 2,
+  "functions": {
+    "api/og.js": {
+      "maxDuration": 30
+    }
+  },
   "rewrites": [
+    {
+      "source": "/api/og",
+      "destination": "/api/og"
+    },
     {
       "source": "/ogimage/:path*",
       "destination": "/ogimage/:path*"
     },
     {
-      "source": "/",
-      "destination": "/api/og",
-      "has": [
-        {
-          "type": "header",
-          "key": "user-agent",
-          "value": ".*(bot|crawler|spider|crawling|facebookexternalhit|twitterbot|linkedinbot|slackbot|whatsapp|telegram|pinterest|discord|facebot).*"
-        }
-      ]
-    },
-    {
-      "source": "/",
-      "destination": "/api/og",
-      "has": [
-        {
-          "type": "query",
-          "key": "lang"
-        }
-      ]
-    },
-    {
-      "source": "/((?!api|ogimage|_next|favicon\\.ico|robots\\.txt|sitemap\\.xml).*)",
-      "destination": "/api/og",
-      "has": [
-        {
-          "type": "header",
-          "key": "user-agent",
-          "value": ".*(bot|crawler|spider|crawling|facebookexternalhit|twitterbot|linkedinbot|slackbot|whatsapp|telegram|pinterest|discord|facebot).*"
-        }
-      ]
-    },
-    {
-      "source": "/((?!api|ogimage|_next|favicon\\.ico|robots\\.txt|sitemap\\.xml).*)",
-      "destination": "/api/og",
-      "has": [
-        {
-          "type": "query",
-          "key": "lang"
-        }
-      ]
-    },
-    {
-      "source": "/((?!api|ogimage|_next|favicon\\.ico|robots\\.txt|sitemap\\.xml).*)",
+      "source": "/((?!robots\\.txt|sitemap\\.xml).*)",
       "destination": "/index.html"
     }
-  ],
-  "cleanUrls": false
+  ]
 }

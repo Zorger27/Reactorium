@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import {BrowserRouter as Router, Routes, Route, useLocation, Navigate} from 'react-router-dom';
+// import {BrowserRouter as Router, Routes, Route, useLocation, Navigate} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route, useLocation} from 'react-router-dom';
 import Canonical from '@/components/seo/Canonical.jsx';
 import GoogleAnalytics from '@/components/seo/GoogleAnalytics.jsx';
 
@@ -59,7 +60,7 @@ const AppLayout = () => {
             <Route path="/404" element={<PageNotFound />} />
 
             {/* Обработка неизвестных маршрутов */}
-            <Route path="*" element={<Navigate to="/404" replace />} />
+            {/*<Route path="*" element={<Navigate to="/404" replace />} />*/}
 
           </Routes>
         </main>

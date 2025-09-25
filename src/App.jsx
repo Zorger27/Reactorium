@@ -20,6 +20,11 @@ const AppLayout = () => {
   const isNotFound = location.pathname.startsWith('/404');
   const routeKey = location.pathname;
 
+  // Исключаем API маршруты и статические файлы из React Router
+  const isApiRoute = location.pathname.startsWith('/api') ||
+    location.pathname === '/robots.txt' ||
+    location.pathname === '/sitemap.xml';
+
   const [isFooterHidden, setIsFooterHidden] = useState(false);
 
   // Загружаем состояние при смене маршрута
@@ -40,6 +45,11 @@ const AppLayout = () => {
       return next;
     });
   }, [routeKey]);
+
+  // Если это API маршрут - не показываем React приложение вообще
+  if (isApiRoute) {
+    return null;
+  }
 
   return (
     <FooterContext.Provider value={{ isFooterHidden, toggleFooter }}>
@@ -70,9 +80,9 @@ const AppLayout = () => {
 };
 
 const App = () => (
-    <Router>
-      <AppLayout />
-    </Router>
+  <Router>
+    <AppLayout />
+  </Router>
 );
 
 export default App;

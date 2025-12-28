@@ -16,7 +16,7 @@
 #### 🔥 The project is powered by a solid stack of modern technologies that make development fast, efficient, and scalable. ####
 
 🛠️ <ins>Technologies:</ins><br>
-🔹 React 19.1 ⚛️ — modern UI development.<br>
+🔹 React ⚛️ — modern UI development.<br>
 🔹 Redux Toolkit 🎯 — efficient and scalable state management.<br>
 🔹 React Router 🧭 — seamless navigation between apps.<br>
 🔹 React i18next 🌍 — multilingual support (EN, ES, UK).<br>
